@@ -1,6 +1,7 @@
 import Brands from "./Pages/Brands"
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Zoomol from "./Pages/Zoomol";
+import NotFound from "./Pages/NotFound";
 
 
 function App() {
@@ -18,6 +19,10 @@ function App() {
       path: "/brand/zoomol",
       element: <Zoomol />,
     }, 
+    {
+      path: "*",
+      element: <NotFound />,
+    },
 
   ])
   return (
