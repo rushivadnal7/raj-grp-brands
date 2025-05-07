@@ -433,7 +433,7 @@ function Brands() {
             {brandData?.Segments1?.map((segment, index) => (
               <div
                 key={index}
-                className="bg-white rounded-md w-full shadow-lg overflow-hidden"
+                className="bg-white font-bold rounded-md w-full shadow-lg overflow-hidden"
               >
                 <div
                   className="flex justify-between items-center p-4 cursor-pointer"
@@ -487,7 +487,7 @@ function Brands() {
                           <hr className="block sm:hidden" />
                           {/* Mobile View: Product Description */}
                           {visibleProductIndex === productIndex && (
-                            <div className="mt-2 block sm:hidden">
+                            <div className="mt-2 block  sm:hidden">
                               <div
                                 dangerouslySetInnerHTML={{
                                   __html: product?.productDescription,
@@ -503,7 +503,7 @@ function Brands() {
 
                     {/* Larger View: Product Description */}
                     {visibleProductIndex !== null && (
-                      <div className="mt-4 hidden sm:flex">
+                      <div className="mt-4 hidden font-medium  sm:flex">
                         <div
                           dangerouslySetInnerHTML={{
                             __html:
