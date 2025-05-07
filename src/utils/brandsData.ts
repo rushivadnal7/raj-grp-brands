@@ -103,7 +103,7 @@ export const Data = [
   {
     id: 2,
     name: "Electrol",
-    brochureLinks : ['/brochures/dummy.pdf'],
+    brochureLinks : ['/brochures/Electrol Brochures.zip'],
     bannerImage: "/Brands/electrol_banner.jpg",
     video: "/brand_videos/Electrol&Bio-electrol.mp4",
     mainLogo: "/electrol.png",
@@ -411,7 +411,7 @@ ELECTROL premium insulating oils perform exceedingly well in key performance cri
   {
     id: 3,
     name: "Kyros",
-    brochureLinks : ['/brochures/dummy.pdf'],
+    brochureLinks : ['/brochures/Kyros Brochures.zip'],
     bannerImage: "/Brands/kyros_web_banner.jpeg",
     video: "/brand_videos/Kyros.mp4",
     mainLogo: "/kyros.png",
