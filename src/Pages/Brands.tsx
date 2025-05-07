@@ -433,10 +433,10 @@ function Brands() {
             {brandData?.Segments1?.map((segment, index) => (
               <div
                 key={index}
-                className="bg-white font-bold rounded-md w-full shadow-lg overflow-hidden"
+                className="bg-white rounded-md w-full shadow-lg overflow-hidden"
               >
                 <div
-                  className="flex justify-between items-center p-4 cursor-pointer"
+                  className="flex font-bold justify-between items-center p-4 cursor-pointer"
                   onClick={() => toggleSegment(segment?.segmentName)}
                 >
                   <h3 className="text-sm sm:text-base poppins-semibold ">
@@ -453,7 +453,7 @@ function Brands() {
 
                 {expandedSegment === segment?.segmentName && (
                   <div className="px-4 pb-4">
-                    <div className="flex flex-wrap gap-6 mb-4">
+                    <div className="flex font-bold flex-wrap gap-6 mb-4">
                       {segment?.productName?.map((product, productIndex) => (
                         <div
                           key={productIndex}
@@ -503,7 +503,7 @@ function Brands() {
 
                     {/* Larger View: Product Description */}
                     {visibleProductIndex !== null && (
-                      <div className="mt-4 hidden font-medium  sm:flex">
+                      <div className="mt-4 hidden font-light-  sm:flex">
                         <div
                           dangerouslySetInnerHTML={{
                             __html:

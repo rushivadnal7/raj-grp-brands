@@ -1601,7 +1601,7 @@ compressors.
   {
     id: 5,
     name: "Onwo",
-    brochureLinks : ['/brochures/ONWO Food Safe Brochure v3 copy.pdf'],
+    brochureLinks: ["/brochures/ONWO Food Safe Brochure v3 copy.pdf"],
     bannerImage: "/Brands/onwo_banner.jpg",
     video: "/brand_videos/Onwo.mp4",
     mainLogo: "/Onwo.png",
@@ -1722,8 +1722,8 @@ and impact resistance properties for prolonging component life.</p>`,
           {
             vname:
               "ONWO Rope Safe CR00 Grease for Grease for Carne wire rope Application",
-            productDescription: `<p><b>ONWO ROPESAFE
-CR00</b> is a semi-fluid wire rope lubricant designed to meet the lubrication and corrosion prevention
+            productDescription: `<p>ONWO ROPESAFE
+CR00 is a semi-fluid wire rope lubricant designed to meet the lubrication and corrosion prevention
 requirements of wire ropes working under all conditions. ONWO ROPESAFE CR00 penetrates
 between the rope strands to provide integral lubrication and to provide both internal and external
 protection against corrosion caused by wet, adverse corking conditions in Industries</p>`,
@@ -1747,8 +1747,8 @@ running at Dm.N factors up to 1,200,000.</p>
           {
             vname: "ONWO ULTRA GREASE WR2M for Yoke assembly application",
             productDescription: `<div>
-              <p><b>ONWO ULTRA
-GREASE WR2M</b> is a heavy-duty lithium calcium grease fortified with molybdenum
+              <p>ONWO ULTRA
+GREASE WR2M is a heavy-duty lithium calcium grease fortified with molybdenum
 disulphide and synergistic additives for outstanding load bearing capacity and
 excellent resistance to water under extreme conditions. ONWO ULTRA GREASE
 WR2M exhibits good shear stability and has excellent adhesive properties.</p>
@@ -1788,7 +1788,7 @@ dm.N factors upto 500,000.</p></div>`,
           {
             vname: "ONWO ULTRASPIN EE12 for spindle application",
             productDescription: `<div>
-              <p><b>ONWO ULTRA SPIN EE12</b> is a state-of-the-art,
+              <p>ONWO ULTRA SPIN EE12 is a state-of-the-art,
 low friction, energy efficient spindle lubricant designed for lubrication of high-speed textile
 machinery. It is formulated from specially selected semi-synthetic base fluids having
 excellent stability and low volatility. It is fortified with high performance additives to ensure
@@ -1800,8 +1800,8 @@ protection against rust and oxidation.</p>
             vname:
               "ONWO ULTRA GREASE WR2 for multipurpose machine bearing application",
             productDescription: `<div>
-              <p><b> ONWO ULTRA GREASE
-WR2</b> is a heavy-duty lithium calcium grease fortified with synergistic additives for outstanding load
+              <p> ONWO ULTRA GREASE
+WR2 is a heavy-duty lithium calcium grease fortified with synergistic additives for outstanding load
 bearing capacity and excellent resistance to water under extreme conditions. It exhibits good shear
 stability and has excellent adhesive properties and outstanding ability to withstand shock loads, even
 under humid and near saturation conditions. It protects the mechanism from rusting and has excellent
@@ -1812,7 +1812,7 @@ water washout characteristics.</p>
             vname:
               "ONWO POLYTEK SUPER 2 GREASE for Ring frame assembly, motor / blower bearing",
             productDescription: `<div>
-              <p> </b> ONWO
+              <p>  ONWO
 POLYTEK SUPER 2 GREASE is a long life non soap grease based on superior polyurea technology. It is a
 high performance product formulated from superior mineral base oil and fortified with extreme pressure
 and antiwear additives along with antioxidants and anticorrosive agents for superior performance. It
@@ -1822,8 +1822,8 @@ shows good water washout and water resisting properties and excellent sealing pr
           {
             vname: "ONWO SEMI FLUID MSG 00/000 FOR GEAR BOX APPLICATION",
             productDescription: `<div>
-              <p><b> ONWO SEMI FLUID GREASES
-MSG 00 & 000 </b> are versatile semi fluid greases designed to cover a wide range of
+              <p> ONWO SEMI FLUID GREASES
+MSG 00 & 000  are versatile semi fluid greases designed to cover a wide range of
 applications under extremes of temperature and loading under adverse environments. iT
 contains extreme pressure/ anti-wear additives and a highly stable mineral base oil to
 provide good low friction characteristics even at high loads and speeds. contains extreme
@@ -1852,8 +1852,8 @@ high loads under high temperature oxidising conditions and it provides good seal
             vname:
               "ONWO ULTRALOAD CHISEL PASTE 2 FOR ROCK HAMMER / DRILL APPLICATION",
             productDescription: `<div>
-              <p><b>ONWO
-ULTRALOAD CHISEL PASTE 2</b> is a heavy-duty paste formulated with high temperature grease and
+              <p>ONWO
+ULTRALOAD CHISEL PASTE 2 is a heavy-duty paste formulated with high temperature grease and
 fortified with metal powders and solid lubricants for withstanding high temperatures as well as high
 shock and vibratory loads. It is designed for preventing seizure of metallic parts subjected to shock
 and vibrating loads and fretting corrosion. It has high dropping point thickener to ensure protection of
@@ -1917,7 +1917,7 @@ under category H1 and certified to be safe for incidental contact with food prod
           },
           {
             vname: "FOODSAFE PAO OIL",
-            productDescription: `<p><b>ONWO FOODSAFE PAO OILS 20, 32 and 100</b> are food grade nontoxic oils designed for
+            productDescription: `<p>ONWO FOODSAFE PAO OILS 20, 32 and 100 are food grade nontoxic oils designed for
 industrial applications in the food, drink and pharmaceutical processing and packaging equipment.
 These can also be used for heat transfer, gear & hydraulic systems where a clean, non-staining hydraulic
 fluid is required. ONWO FOODSAFE PAO OILS are formulated with USDA approved ingredients and
@@ -1927,7 +1927,7 @@ registered with NSF under category H1 and certified to be safe for incidental co
           {
             vname: "FOODSAFE VHVI HYDRAULIC OILS",
             productDescription: `<div>
-              <p>: ONWO FOODSAFE VHVI HYDRAULIC OILS 32, 46 and 68 are
+              <p> ONWO FOODSAFE VHVI HYDRAULIC OILS 32, 46 and 68 are
 food grade nontoxic oils designed for hydraulic systems used in the food, drinks and
 pharmaceutical processing and packaging equipment. These can also be used for other
 hydraulic systems where a clean, non-staining hydraulic fluid is required. It is registered
@@ -1943,8 +1943,8 @@ products.</p>
           {
             vname:
               "ONWO Rope Safe CR00 Grease for Grease for Carne wire rope Application ",
-            productDescription: `<p><b>ONWO
-ROPESAFE CR00</b> is a semi-fluid wire rope lubricant designed to meet the lubrication and
+            productDescription: `<p>ONWO
+ROPESAFE CR00 is a semi-fluid wire rope lubricant designed to meet the lubrication and
 corrosion prevention requirements of wire ropes working under all conditions. ONWO
 ROPESAFE CR00 penetrates between the rope strands to provide integral lubrication and to
 provide both internal and external protection against corrosion caused by wet, adverse corking
@@ -1955,8 +1955,8 @@ conditions in Industries.
             vname:
               "ONWO Multishiled Plus 2 blue grease for Vehicle Wheel bearing application",
             productDescription: `<div>
-              <p><b> ONWO
-MULTISHIELD PLUS 2 BLUE </b> is premium long-life lithium complex greases with excellent high
+              <p> ONWO
+MULTISHIELD PLUS 2 BLUE is premium long-life lithium complex greases with excellent high
 temperature capability coupled with outstanding mechanical stability and superior adhesion
 properties. It provides oxidation stability for significantly extending relubrication intervals
 even at high temperatures and under high or shock loading in automotive or industrial
@@ -1967,8 +1967,8 @@ applications </p>
             vname:
               "Synthetic Gear Oil ( PAO and PAG ) for Gear Box application",
             productDescription: `<div>
-              <p><b>ONWO SYNTHETIC GEAR OIL SF
-SERIES ( PAO )</b> and PG SERIES ( PAG ) are fully synthetic gear oils designed for
+              <p>ONWO SYNTHETIC GEAR OIL SF
+SERIES ( PAO ) and PG SERIES ( PAG ) are fully synthetic gear oils designed for
 lubrication of enclosed gearboxes and as well plain and rolling element bearings.
 ONWO SYNTHETIC GEAR OIL provide outstanding performance under severe high
 and low temperature performance and helps in reducing fluid friction thus lowering
@@ -1979,8 +1979,8 @@ the operating temperatures and improved gear efficiency.</p>
             vname:
               "ONWO Multishiled EM2 and EM3 Grease for Electric Motor bearing application",
             productDescription: `<div>
-              <p><b>  ONWO
-MULTISHIELD EM2/EM3 GREASES</b> are premium quality, highly shear stable lithium complex
+              <p>  ONWO
+MULTISHIELD EM2/EM3 GREASES are premium quality, highly shear stable lithium complex
 grease fortified with synergistic blend of additives like antioxidants, corrosion inhibitors and
 extreme pressure/anti-wear agents for maintenance free operation in rolling element
 bearings with vibrating housings such as electric motors. The high dropping point complex
