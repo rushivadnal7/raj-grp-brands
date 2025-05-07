@@ -8,7 +8,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Brands />
+      element: <Zoomol />
     },
     {
       path: "/brand/:name",
