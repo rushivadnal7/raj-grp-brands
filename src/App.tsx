@@ -15,6 +15,11 @@ function App() {
       path: "/brand/:name",
       element: <Brands />,
     }, 
+
+    {
+      path: "/brand/Stansol",
+      element: <Brands />,
+    }, 
     {
       path: "/brand/zoomol",
       element: <Zoomol />,
