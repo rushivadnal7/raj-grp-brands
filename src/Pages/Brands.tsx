@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { ChevronDown, ChevronUp, Download, FileText } from "lucide-react";
 // import { Data } from "../assets/data";
 import { FaPlay } from "react-icons/fa";
@@ -40,12 +40,7 @@ const formSchema = z.object({
 });
 
 function Brands() {
-  // const { name } = useParams<{ name: string }>();
-  const location = useLocation();
-  const pathParts = location.pathname.split('/'); // ['', 'zoomol']
-  const name = pathParts[1];
-  console.log(name); 
-
+  const { name } = useParams<{ name: string }>();
   const [expandedSegment, setExpandedSegment] = useState("");
   const [visibleProductIndex, setVisibleProductIndex] = useState<number | null>(
     null
@@ -195,10 +190,10 @@ function Brands() {
                 src={brandData.mainLogo}
                 alt=""
                 className={`object-center h-[70px] lg:h-[100px]  mx-5  ${brandData.mainLogo === "/electrol.png" ||
-                  brandData.mainLogo ===
-                  "/transparent-brands-logo/agrispray.png"
-                  ? "md:w-96 w-60 object-contain "
-                  : ""
+                    brandData.mainLogo ===
+                    "/transparent-brands-logo/agrispray.png"
+                    ? "md:w-96 w-60 object-contain "
+                    : ""
                   }`}
               />
               {/* <h1>{brandData.name}</h1> */}
@@ -466,8 +461,8 @@ function Brands() {
                         >
                           <div
                             className={`flex items-center justify-start cursor-pointer ${visibleProductIndex === productIndex
-                              ? "font-bold"
-                              : ""
+                                ? "font-bold"
+                                : ""
                               }`}
                             onClick={() =>
                               toggleProductDescription(productIndex)
@@ -475,15 +470,15 @@ function Brands() {
                           >
                             <span
                               className={`flex items-center poppins-semibold ${visibleProductIndex === productIndex
-                                ? "text-[#046fbb]"
-                                : "text-black"
+                                  ? "text-[#046fbb]"
+                                  : "text-black"
                                 }`}
                             >
                               <FaPlay
                                 fill="#046fbb"
                                 className={`mr-2 ${visibleProductIndex === productIndex
-                                  ? "rotate-90"
-                                  : "rotate-0"
+                                    ? "rotate-90"
+                                    : "rotate-0"
                                   } transition-all duration-200`}
                               />
                               {product.vname}
@@ -563,8 +558,8 @@ function Brands() {
                               >
                                 <div
                                   className={`flex items-center justify-start cursor-pointer ${visibleProductIndex === productIndex
-                                    ? "font-bold"
-                                    : ""
+                                      ? "font-bold"
+                                      : ""
                                     }`}
                                   onClick={() =>
                                     toggleProductDescription(productIndex)
@@ -572,8 +567,8 @@ function Brands() {
                                 >
                                   <span
                                     className={`flex items-center font-bold ${visibleProductIndex === productIndex
-                                      ? "text-[#046fbb]"
-                                      : "text-black"
+                                        ? "text-[#046fbb]"
+                                        : "text-black"
                                       }`}
                                   >
                                     <FaPlay fill="#046fbb" className="mr-2" />
@@ -653,8 +648,8 @@ function Brands() {
                               >
                                 <div
                                   className={`flex items-center justify-start cursor-pointer ${visibleProductIndex === productIndex
-                                    ? "font-bold"
-                                    : ""
+                                      ? "font-bold"
+                                      : ""
                                     }`}
                                   onClick={() =>
                                     toggleProductDescription(productIndex)
@@ -662,15 +657,15 @@ function Brands() {
                                 >
                                   <span
                                     className={`flex items-center poppins-semibold ${visibleProductIndex === productIndex
-                                      ? "text-[#046fbb]"
-                                      : "text-black"
+                                        ? "text-[#046fbb]"
+                                        : "text-black"
                                       }`}
                                   >
                                     <FaPlay
                                       fill="#046fbb"
                                       className={`mr-2 ${visibleProductIndex === productIndex
-                                        ? "rotate-90"
-                                        : "rotate-0"
+                                          ? "rotate-90"
+                                          : "rotate-0"
                                         } transition-all duration-200`}
                                     />
                                     {product.vname}
@@ -980,8 +975,8 @@ function Brands() {
                           <div key={productIndex} className="w-full sm:w-fit">
                             <div
                               className={`flex items-center justify-start cursor-pointer ${visibleProductIndex === productIndex
-                                ? "font-bold"
-                                : ""
+                                  ? "font-bold"
+                                  : ""
                                 }`}
                               onClick={() =>
                                 toggleProductDescription(productIndex)
@@ -989,15 +984,15 @@ function Brands() {
                             >
                               <span
                                 className={`flex items-center poppins-semibold ${visibleProductIndex === productIndex
-                                  ? "text-[#046fbb]"
-                                  : "text-black"
+                                    ? "text-[#046fbb]"
+                                    : "text-black"
                                   }`}
                               >
                                 <FaPlay
                                   fill="#046fbb"
                                   className={`mr-2 ${visibleProductIndex === productIndex
-                                    ? "rotate-90"
-                                    : "rotate-0"
+                                      ? "rotate-90"
+                                      : "rotate-0"
                                     } transition-all duration-200`}
                                 />
                                 {product.vname}
@@ -1079,8 +1074,8 @@ function Brands() {
                                 >
                                   <div
                                     className={`flex items-center justify-start cursor-pointer ${visibleProductIndex === productIndex
-                                      ? "font-bold"
-                                      : ""
+                                        ? "font-bold"
+                                        : ""
                                       }`}
                                     onClick={() =>
                                       toggleProductDescription(productIndex)
@@ -1088,8 +1083,8 @@ function Brands() {
                                   >
                                     <span
                                       className={`flex items-center font-bold ${visibleProductIndex === productIndex
-                                        ? "text-[#046fbb]"
-                                        : "text-black"
+                                          ? "text-[#046fbb]"
+                                          : "text-black"
                                         }`}
                                     >
                                       <FaPlay fill="#046fbb" className="mr-2" />
@@ -1171,8 +1166,8 @@ function Brands() {
                                 >
                                   <div
                                     className={`flex items-center justify-start cursor-pointer ${visibleProductIndex === productIndex
-                                      ? "font-bold"
-                                      : ""
+                                        ? "font-bold"
+                                        : ""
                                       }`}
                                     onClick={() =>
                                       toggleProductDescription(productIndex)
@@ -1180,15 +1175,15 @@ function Brands() {
                                   >
                                     <span
                                       className={`flex items-center poppins-semibold ${visibleProductIndex === productIndex
-                                        ? "text-[#046fbb]"
-                                        : "text-black"
+                                          ? "text-[#046fbb]"
+                                          : "text-black"
                                         }`}
                                     >
                                       <FaPlay
                                         fill="#046fbb"
                                         className={`mr-2 ${visibleProductIndex === productIndex
-                                          ? "rotate-90"
-                                          : "rotate-0"
+                                            ? "rotate-90"
+                                            : "rotate-0"
                                           } transition-all duration-200`}
                                       />
                                       {product.vname}

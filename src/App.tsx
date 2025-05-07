@@ -17,10 +17,6 @@ function App() {
     }, 
 
     {
-      path: "/brand/Stansol",
-      element: <Brands />,
-    }, 
-    {
       path: "/brand/zoomol",
       element: <Zoomol />,
     }, 
