@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { ChevronDown, ChevronUp, Download, FileText } from "lucide-react";
-// import { Data } from "../assets/data";
+// import { Data } from "@/assets/data";
 import { FaPlay } from "react-icons/fa";
 import {
   Dialog,
@@ -10,10 +10,11 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from "../components/ui/dialog";
-import { Button } from "../components/ui/button";
-import { Label } from "../components/ui/label";
-import { Input } from "../components/ui/input";
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import { Helmet } from "react-helmet";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -24,10 +25,11 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "../components/ui/form";
+} from "@/components/ui/form";
 import axios from "axios";
 import { toast } from "sonner";
-import { Data } from "../utils/brandsData";
+import ReCAPTCHA from "react-google-recaptcha";
+import { Data } from "@/utils/brandsData";
 
 const formSchema = z.object({
   firstName: z.string().min(3, { message: "First Name is required." }),
@@ -38,6 +40,18 @@ const formSchema = z.object({
   }),
   companyName: z.string().min(3, { message: "Company name is required." }),
 });
+
+<Helmet>
+  <title>Raj Petro Brands | Kyros, Zoomol, Rajell & More</title>
+  <meta
+    name="description"
+    content="Explore Raj Petro’s diverse brand portfolio, including Kyros, Zoomol, Rajell, and others, catering to various industrial and automotive needs."
+  />
+  <meta
+    name="keywords"
+    content="Raj Petro brands, Kyros lubricants, Zoomol oils, industrial lubricants brands"
+  />
+</Helmet>;
 
 function Brands() {
   const { name } = useParams<{ name: string }>();
@@ -72,7 +86,6 @@ function Brands() {
         brand: name?.charAt(0).toUpperCase() + name?.slice(1).toLowerCase(),
       };
 
-
       console.log(payload);
 
       const response = await axios.post(
@@ -84,9 +97,7 @@ function Brands() {
         position: "bottom-center",
       });
 
-      console.log("Form submitted successfully:", response.data);
-      ; // Replace this with your dynamic array
-
+      console.log("Form submitted successfully:", response.data); // Replace this with your dynamic array
       // Utility to trigger download
       const downloadFile = (filePath, fileName) => {
         const link = document.createElement("a");
@@ -99,15 +110,11 @@ function Brands() {
         document.body.removeChild(link);
       };
 
-
-
       brandData?.brochureLinks.forEach((pdfPath) => {
         console.log(pdfPath);
         const fileName = pdfPath.split("/").pop(); // Extract actual filename from path
         downloadFile(pdfPath, fileName);
       });
-
-
     } catch (error) {
       if (axios.isAxiosError(error)) {
         console.error(
@@ -134,8 +141,6 @@ function Brands() {
     // document.body.removeChild(link);
   };
 
-
-
   const toggleSegment = (segment: string) => {
     if (expandedSegment === segment) {
       setExpandedSegment("");
@@ -156,8 +161,9 @@ function Brands() {
     return <div>Brand not found</div>;
   }
 
+  const onChange = () => {};
   return (
-    <div className="bg-white mb-10">
+    <div className="bg-white ">
       <div className="h-full relative">
         {brandData.video ? (
           <a href={brandData.link} target="blank">
@@ -189,12 +195,13 @@ function Brands() {
               <img
                 src={brandData.mainLogo}
                 alt=""
-                className={`object-center h-[70px] lg:h-[100px]  mx-5  ${brandData.mainLogo === "/electrol.png" ||
-                    brandData.mainLogo ===
+                className={`object-center h-[70px] lg:h-[100px]  mx-5  ${
+                  brandData.mainLogo === "/electrol.png" ||
+                  brandData.mainLogo ===
                     "/transparent-brands-logo/agrispray.png"
                     ? "md:w-96 w-60 object-contain "
                     : ""
-                  }`}
+                }`}
               />
               {/* <h1>{brandData.name}</h1> */}
             </div>
@@ -223,7 +230,7 @@ function Brands() {
                       <Form {...form}>
                         <form
                           onSubmit={form.handleSubmit(onSubmit)}
-                          className="space-y-8"
+                          className="space-y-8 py-5"
                         >
                           <div className="flex flex-wrap gap-4">
                             <FormField
@@ -260,7 +267,7 @@ function Brands() {
                               )}
                             />
                           </div>
-                          <div className="flex flex-wrap gap-4">
+                          <div className="flex flex-wrap gap-2">
                             <FormField
                               control={form.control}
                               name="email"
@@ -315,6 +322,10 @@ function Brands() {
                               )}
                             />
                           </div>
+                          {/* <ReCAPTCHA
+                            sitekey="Your client site key"
+                            onChange={onChange}
+                          /> */}
                           <Button
                             type="submit"
                             className="bg-[#0066b2] text-white font-semibold  rounded-lg shadow-md hover:bg-[#005a99] transition duration-300 flex items-center justify-center w-full sm:w-auto py-6"
@@ -331,11 +342,11 @@ function Brands() {
                 {["kyros", "onwo", "zoomol"].includes(
                   brandData.name?.toLowerCase()
                 ) && (
-                    <button className="bg-[#0066b2] text-white font-semibold py-4 max-sm:py-6 px-4 rounded-lg shadow-md hover:bg-[#005a99] transition duration-300 flex items-center justify-center w-full sm:w-auto text-sm max-sm:text-base">
-                      Product Data Sheet
-                      <Download className="ml-2 size-5" />
-                    </button>
-                  )}
+                  <button className="bg-[#0066b2] text-white font-semibold py-4 max-sm:py-6 px-4 rounded-lg shadow-md hover:bg-[#005a99] transition duration-300 flex items-center justify-center w-full sm:w-auto text-sm max-sm:text-base">
+                    Product Data Sheet
+                    <Download className="ml-2 size-5" />
+                  </button>
+                )}
 
                 {brandData.link && (
                   <a
@@ -401,7 +412,7 @@ function Brands() {
                   </div>
                   <div className="flex justify-center items-center text-[13px] w-full text-gray-700 bg-gray-200 min-h-[80px] max-sm:px-2">
                     {"National" in brandData.table[0] &&
-                      brandData.table[0].National?.length
+                    brandData.table[0].National?.length
                       ? brandData.table[0].National.join(", ")
                       : brandData.table[0].OEM?.join(", ")}
                   </div>
@@ -421,22 +432,22 @@ function Brands() {
       </div>
 
       {/* Segments Section */}
-      <div className="px-4 sm:px-8 md:px-16">
-        <div className="w-full mb-[150px] mx-auto px-6">
-          <h2 className="text-xl sm:text-2xl font-bold uppercase mb-4 ">
+      <div className="px-4 sm:px-8 md:px-15">
+        <div className="w-full mb-[50px] flex flex-col ">
+          <h2 className="text-xl text-left sm:text-2xl font-bold uppercase mb-4 pl-6">
             {brandData.segmentTitle1
               ? "segments -" + brandData.segmentTitle1
               : "segments"}
           </h2>
 
-          <div className="space-y-4">
+          <div className="space-y-4 px-6">
             {brandData?.Segments1?.map((segment, index) => (
               <div
                 key={index}
                 className="bg-white rounded-md w-full shadow-lg overflow-hidden"
               >
                 <div
-                  className="flex font-bold justify-between items-center p-4 cursor-pointer"
+                  className="flex justify-between items-center p-4 cursor-pointer"
                   onClick={() => toggleSegment(segment?.segmentName)}
                 >
                   <h3 className="text-sm sm:text-base poppins-semibold ">
@@ -453,33 +464,36 @@ function Brands() {
 
                 {expandedSegment === segment?.segmentName && (
                   <div className="px-4 pb-4">
-                    <div className="flex font-bold flex-wrap gap-6 mb-4">
+                    <div className="flex flex-wrap gap-6 mb-4">
                       {segment?.productName?.map((product, productIndex) => (
                         <div
                           key={productIndex}
-                          className="w-full sm:w-[calc(50%-1.5rem)] md:w-[calc(33.33%-1.5rem)]"
+                          className="w-full sm:w-[calc(50%-1.5rem)] md:w-full"
                         >
                           <div
-                            className={`flex items-center justify-start cursor-pointer ${visibleProductIndex === productIndex
+                            className={`flex items-center justify-start cursor-pointer ${
+                              visibleProductIndex === productIndex
                                 ? "font-bold"
                                 : ""
-                              }`}
+                            }`}
                             onClick={() =>
                               toggleProductDescription(productIndex)
                             }
                           >
                             <span
-                              className={`flex items-center poppins-semibold ${visibleProductIndex === productIndex
+                              className={`flex  items-center poppins-semibold ${
+                                visibleProductIndex === productIndex
                                   ? "text-[#046fbb]"
                                   : "text-black"
-                                }`}
+                              }`}
                             >
                               <FaPlay
                                 fill="#046fbb"
-                                className={`mr-2 ${visibleProductIndex === productIndex
+                                className={`mr-2 ${
+                                  visibleProductIndex === productIndex
                                     ? "rotate-90"
                                     : "rotate-0"
-                                  } transition-all duration-200`}
+                                } transition-all duration-200`}
                               />
                               {product.vname}
                             </span>
@@ -487,7 +501,7 @@ function Brands() {
                           <hr className="block sm:hidden" />
                           {/* Mobile View: Product Description */}
                           {visibleProductIndex === productIndex && (
-                            <div className="mt-2 block  sm:hidden">
+                            <div className="mt-2 block sm:hidden">
                               <div
                                 dangerouslySetInnerHTML={{
                                   __html: product?.productDescription,
@@ -503,7 +517,7 @@ function Brands() {
 
                     {/* Larger View: Product Description */}
                     {visibleProductIndex !== null && (
-                      <div className="mt-4 hidden font-light-  sm:flex">
+                      <div className="mt-4 hidden sm:flex">
                         <div
                           dangerouslySetInnerHTML={{
                             __html:
@@ -557,19 +571,21 @@ function Brands() {
                                 className="w-full sm:w-[calc(50%-1.5rem)] md:w-[calc(33.33%-1.5rem)]"
                               >
                                 <div
-                                  className={`flex items-center justify-start cursor-pointer ${visibleProductIndex === productIndex
+                                  className={`flex items-center justify-start cursor-pointer ${
+                                    visibleProductIndex === productIndex
                                       ? "font-bold"
                                       : ""
-                                    }`}
+                                  }`}
                                   onClick={() =>
                                     toggleProductDescription(productIndex)
                                   }
                                 >
                                   <span
-                                    className={`flex items-center font-bold ${visibleProductIndex === productIndex
+                                    className={`flex items-center font-bold ${
+                                      visibleProductIndex === productIndex
                                         ? "text-[#046fbb]"
                                         : "text-black"
-                                      }`}
+                                    }`}
                                   >
                                     <FaPlay fill="#046fbb" className="mr-2" />
                                     {product.vname}
@@ -647,26 +663,29 @@ function Brands() {
                                 className="w-full sm:w-[calc(50%-1.5rem)] md:w-[calc(33.33%-1.5rem)]"
                               >
                                 <div
-                                  className={`flex items-center justify-start cursor-pointer ${visibleProductIndex === productIndex
+                                  className={`flex items-center justify-start cursor-pointer ${
+                                    visibleProductIndex === productIndex
                                       ? "font-bold"
                                       : ""
-                                    }`}
+                                  }`}
                                   onClick={() =>
                                     toggleProductDescription(productIndex)
                                   }
                                 >
                                   <span
-                                    className={`flex items-center poppins-semibold ${visibleProductIndex === productIndex
+                                    className={`flex items-center poppins-semibold ${
+                                      visibleProductIndex === productIndex
                                         ? "text-[#046fbb]"
                                         : "text-black"
-                                      }`}
+                                    }`}
                                   >
                                     <FaPlay
                                       fill="#046fbb"
-                                      className={`mr-2 ${visibleProductIndex === productIndex
+                                      className={`mr-2 ${
+                                        visibleProductIndex === productIndex
                                           ? "rotate-90"
                                           : "rotate-0"
-                                        } transition-all duration-200`}
+                                      } transition-all duration-200`}
                                     />
                                     {product.vname}
                                   </span>
@@ -711,11 +730,10 @@ function Brands() {
         </div>
       </div>
 
-      <hr className="my-10" />
       {brandData.extraData && (
         <>
           {/* Header Section */}
-          <div className="md:px-10 mt-[100px] mb-[50px] pt-14  bg-white p-6 max-sm:p-1">
+          <div className="md:px-10     bg-white p-6 max-sm:p-1">
             <div className="grid grid-cols-2 max-md:grid-cols-1 max-lg:grid-cols-1 2xl:grid-cols-2">
               {/* Left Column - Logo, Title and Description */}
               <div className="space-y-6 flex flex-col justify-center items-start">
@@ -918,7 +936,7 @@ function Brands() {
                       </div>
                       <div className="flex justify-center items-center text-[13px] w-full text-gray-700 bg-gray-200 min-h-[80px] max-sm:px-2">
                         {"National" in brandData.extraData.table[0] &&
-                          brandData.extraData.table[0].National?.length
+                        brandData.extraData.table[0].National?.length
                           ? brandData.extraData.table[0].National.join(", ")
                           : brandData.extraData.table[0].OEM?.join(", ")}
                       </div>
@@ -974,26 +992,29 @@ function Brands() {
                         {segment?.productName?.map((product, productIndex) => (
                           <div key={productIndex} className="w-full sm:w-fit">
                             <div
-                              className={`flex items-center justify-start cursor-pointer ${visibleProductIndex === productIndex
+                              className={`flex items-center justify-start cursor-pointer ${
+                                visibleProductIndex === productIndex
                                   ? "font-bold"
                                   : ""
-                                }`}
+                              }`}
                               onClick={() =>
                                 toggleProductDescription(productIndex)
                               }
                             >
                               <span
-                                className={`flex items-center poppins-semibold ${visibleProductIndex === productIndex
+                                className={`flex items-center poppins-semibold ${
+                                  visibleProductIndex === productIndex
                                     ? "text-[#046fbb]"
                                     : "text-black"
-                                  }`}
+                                }`}
                               >
                                 <FaPlay
                                   fill="#046fbb"
-                                  className={`mr-2 ${visibleProductIndex === productIndex
+                                  className={`mr-2 ${
+                                    visibleProductIndex === productIndex
                                       ? "rotate-90"
                                       : "rotate-0"
-                                    } transition-all duration-200`}
+                                  } transition-all duration-200`}
                                 />
                                 {product.vname}
                               </span>
@@ -1073,19 +1094,21 @@ function Brands() {
                                   className="w-full sm:w-fit"
                                 >
                                   <div
-                                    className={`flex items-center justify-start cursor-pointer ${visibleProductIndex === productIndex
+                                    className={`flex items-center justify-start cursor-pointer ${
+                                      visibleProductIndex === productIndex
                                         ? "font-bold"
                                         : ""
-                                      }`}
+                                    }`}
                                     onClick={() =>
                                       toggleProductDescription(productIndex)
                                     }
                                   >
                                     <span
-                                      className={`flex items-center font-bold ${visibleProductIndex === productIndex
+                                      className={`flex items-center font-bold ${
+                                        visibleProductIndex === productIndex
                                           ? "text-[#046fbb]"
                                           : "text-black"
-                                        }`}
+                                      }`}
                                     >
                                       <FaPlay fill="#046fbb" className="mr-2" />
                                       {product.vname}
@@ -1165,26 +1188,29 @@ function Brands() {
                                   className="w-full sm:w-fit"
                                 >
                                   <div
-                                    className={`flex items-center justify-start cursor-pointer ${visibleProductIndex === productIndex
+                                    className={`flex items-center justify-start cursor-pointer ${
+                                      visibleProductIndex === productIndex
                                         ? "font-bold"
                                         : ""
-                                      }`}
+                                    }`}
                                     onClick={() =>
                                       toggleProductDescription(productIndex)
                                     }
                                   >
                                     <span
-                                      className={`flex items-center poppins-semibold ${visibleProductIndex === productIndex
+                                      className={`flex items-center poppins-semibold ${
+                                        visibleProductIndex === productIndex
                                           ? "text-[#046fbb]"
                                           : "text-black"
-                                        }`}
+                                      }`}
                                     >
                                       <FaPlay
                                         fill="#046fbb"
-                                        className={`mr-2 ${visibleProductIndex === productIndex
+                                        className={`mr-2 ${
+                                          visibleProductIndex === productIndex
                                             ? "rotate-90"
                                             : "rotate-0"
-                                          } transition-all duration-200`}
+                                        } transition-all duration-200`}
                                       />
                                       {product.vname}
                                     </span>
