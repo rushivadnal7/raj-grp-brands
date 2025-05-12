@@ -7,9 +7,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-//   CarouselApi,
-  //   CarouselApi,
-  type CarouselApi
+  type CarouselApi,
 } from "@/components/ui/carousel";
 
 // TypeScript interface for images prop
@@ -169,7 +167,8 @@ const ZoomolCarousel = ({ images }: { images: Image[] }) => {
         </CarouselContent>
 
         {/* Navigation Arrows */}
-        <CarouselPrevious onClick={handlePrevious} />
+        {/* <CarouselPrevious onClick={handlePrevious} /> */}
+        <CarouselPrevious onClick={handlePrevious}/>
         <CarouselNext onClick={handleNext} />
       </Carousel>
 

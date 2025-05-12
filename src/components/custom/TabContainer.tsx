@@ -80,25 +80,28 @@ const TabsContainer: React.FC<TabsContainerProps> = ({
                                     src={tab.img}
                                     className={`${
                                       tab.img === "/Bike-icon.png"
-                                        ? "w-[150px]"
+                                        ? "md:scale-[4] lg:scale-100 lg:w-[150px] "
                                         : "w-[150px]"
-                                    } group-hover:-rotate-12     transition-transform duration-1000 `}
+                                    } `}
                                   />
                                 ) : (
                                   tab.icon
                                 )}
                               </div>
                               <div>
-                                <h1 className="font-bold text-sm sm:text-xl leading-tight px-1 sm:px-2">
-                                  {tab.tabTitle}
-                                </h1>
+                                <h1
+                                  dangerouslySetInnerHTML={{
+                                    __html: tab.tabTitle,
+                                  }}
+                                  className="font-bold text-sm sm:text-xl leading-tight px-1 sm:px-2"
+                                />
                               </div>
                             </div>
                           </div>
 
                           {/* Description Section (Hidden on small devices) */}
-                          <div className="bg-gray-100 w-full   sm:py-16 sm:px-4 hidden sm:flex justify-center items-center ">
-                            <p className="text-xs sm:text-base text-gray-800">
+                          <div className="bg-gray-100 w-full   sm:py-16 sm:px-4 over hidden sm:flex justify-center items-center ">
+                            <p className="text-xs md:text-xs lg:text-base text-gray-800">
                               {tab.description}
                             </p>
                           </div>

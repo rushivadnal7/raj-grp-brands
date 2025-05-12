@@ -61,11 +61,11 @@ export function ImageCarousel({
   return (
     <div className="relative w-full h-full">
       {/* Image container */}
-      <div className="relative w-full h-full overflow-hidden ">
+      <div className="relative w-full h-full md:overflow-hidden  ">
         {images.map((image, index) => (
           <div
             key={index}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-300 ease-in-out ${
+            className={`absolute md:inset-0 w-full h-full transition-opacity duration-300 ease-in-out ${
               index === currentIndex
                 ? isTransitioning
                   ? "opacity-50"
@@ -83,7 +83,7 @@ export function ImageCarousel({
       </div>
 
       {/* Navigation dots - vertical on right side */}
-      <div className="absolute top-1/2 md:-right-6 lg:right-4 -translate-y-1/2 flex flex-col space-y-2 max-sm:flex-row max-sm:space-y-0 max-sm:space-x-2 max-sm:bottom-20 max-sm:top-auto max-sm:left-24  max-sm:translate-y-0">
+      <div className="absolute max-sm:hidden  top-1/2 md:-right-6 lg:right-4 -translate-y-1/2 flex flex-col space-y-2   ">
         {images.map((_, index) => (
           <button
             key={index}
