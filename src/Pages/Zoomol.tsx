@@ -4,17 +4,31 @@ import {
   NotebookIcon as Scooter,
   FlaskRound as Flask,
 } from "lucide-react";
-// import TabsContainer from "../components/custom/TabContainer";
+import TabsContainer from "@/components/custom/TabContainer";
 import { AnimatePresence, motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-// import ZoomolCarousel from "../components/zoomolCarousel/ZoomolCarousel";
-import TabsContainer from "../components/custom/TabContainer";
-import ScrollToTop from "../features/ScrollToTop";
-import { GradualSpacing } from "../components/custom/GradualSpacing";
-import CardSlider from "../components/custom/CardSlider";
-import ZoomolCarousel from "../components/custom/ZoomolCarousel";
+// import CardSlider from "./CardSlider";
+// import ZoomolCarousel from "@/components/zoomolCarousel/ZoomolCarousel";
+import ScrollToTop from "@/features/ScrollToTop";
+import { GradualSpacing } from "@/components/custom/GradualSpacing";
+// import { ImageCarousel } from "@/components/zoomolYaxisCarousel/ImageCarousel";
 
-
+import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { FiFileText } from "react-icons/fi";
+import { ImageCarousel } from "@/components/custom/ImageCarousel";
+import CardSlider from "@/components/custom/CardSlider";
+import ZoomolCarousel from "@/components/custom/ZoomolCarousel";
 
 export interface TabData {
   id: string;
@@ -40,41 +54,32 @@ export const tabsData: TabData[] = [
   },
   {
     Id: 2,
-    id: "bike-oils",
-    title: "BIKE OILS",
-    tabTitle: "BIKE OILS",
-    icon: (
-      <Bike
-        className="group-hover:-rotate-12 transition-transform duration-1000 "
-        size={70}
-      />
-    ),
+    id: "passenger-car-motor-oil",
+    title: "Passenger Car Motor Oil",
+    tabTitle: "Passenger Car Motor Oil",
+    img: "/zoomolIcons/icon2.png",
     description:
       "Motorcycle and Scooter Oils are specially made for use in new generation Bikes and Gearless Scooters.",
-    ctaText: "Explore Bike Oils",
+    ctaText: "Discover Passenger Car Motor Oil",
   },
   {
     Id: 3,
-    id: "scooter-oils",
-    title: "SCOOTER OILS",
-    tabTitle: "SCOOTER OILS",
-    icon: <Scooter size={70} />,
-    img: "/zoomol/Scooter-icon.png",
+    id: "diesel-engine-oils",
+    title: "Diesel Engine Oils",
+    tabTitle: "Diesel Engine Oils",
+
+    img: "/zoomolIcons/icon3.png",
     description:
       "Scooter oils are specially made for use in new generation Bikes and Gearless Scooters.",
-    ctaText: "Discover Scooter Oils",
+    ctaText: "Discover Diesel Engine Oils",
   },
   {
     Id: 4,
     id: "specialty-oils",
     title: "SPECIALTY OILS",
     tabTitle: "SPECIALTY OILS",
-    icon: (
-      <Flask
-        className="group-hover:-rotate-12     transition-transform duration-1000 "
-        size={70}
-      />
-    ),
+
+    img: "/zoomolIcons/icon4.png",
     description:
       "Specialty oils are specially made for use in new generation Bikes and Gearless Scooters.",
     ctaText: "View Specialty Oils",
@@ -83,9 +88,9 @@ export const tabsData: TabData[] = [
 
 const tabImages: Record<string, string> = {
   "motorcycle-oils": "/bike.png",
-  "bike-oils": "/bike.png",
-  "scooter-oils": "/zoomol/Scooter.png",
-  "specialty-oils": "/bike.png",
+  "passenger-car-motor-oil": "/zoomolHeroSection/car.png",
+  "diesel-engine-oils": "/zoomolHeroSection/truck.png",
+  "specialty-oils": "/zoomolHeroSection/grease.png",
 };
 
 function Zoomol() {
@@ -146,6 +151,14 @@ function Zoomol() {
     resetInterval();
   };
 
+  const [selectedTitle, setSelectedTitle] = useState("");
+  const [open, setOpen] = useState(false);
+
+  const handleClick = (title: string) => {
+    setSelectedTitle(title);
+    setOpen(true);
+  };
+
   // useEffect(() => {
   //   const intervalId = setInterval(() => {
   //     setActiveTabId((prevId) => {
@@ -161,28 +174,41 @@ function Zoomol() {
   const cardDetails = [
     {
       detail: "<p>Passenger car<br/> motor oil</p>",
-      img: "/zoomol/car.jpg",
+      img: "/zoomolCarousel/carousel1.png",
     },
     {
       detail: "<p>Tractor oil</p>",
-      img: "/zoomol/zenco-trac.png",
+      img: "/zoomolCarousel/carousel2.png",
     },
     {
       detail: "<p>Three Wheeler</p>",
-      img: "/zoomol/zenco-mg.png",
+      img: "/zoomolCarousel/carousel3.png",
+    },
+
+    {
+      detail: "<p>Passenger car <br/> motor oil</p>",
+      img: "/zoomolCarousel/carousel4.png",
     },
     {
-      detail: "<p>Gear &<br/>Transformer Oil</p>",
-      img: "/zoomol/zenco-xp-9.png",
+      detail: "<p>Tractor oil</p>",
+      img: "/zoomolCarousel/carousel5.png",
     },
     {
-      detail: "<p>GREASES</p>",
-      img: "/zoomol/lubritek-ultramile.png",
+      detail: "<p>Three Wheeler</p>",
+      img: "/zoomolCarousel/carousel6.png",
     },
-    {
-      detail: "<p>Hydraulic Oils</p>",
-      img: "/zoomol/suprahydAW32.png",
-    },
+    // {
+    //   detail: "<p>Gear &<br/>Transformer Oil</p>",
+    //   img: "/zoomol/zenco-xp-9.png",
+    // },
+    // {
+    //   detail: "<p>GREASES</p>",
+    //   img: "/zoomol/lubritek-ultramile.png",
+    // },
+    // {
+    //   detail: "<p>Hydraulic Oils</p>",
+    //   img: "/zoomol/suprahydAW32.png",
+    // },
   ];
 
   const heroDotsNavigationHandler = (value: any) => {
@@ -221,6 +247,113 @@ function Zoomol() {
     sequence();
   }, [activeTabId]);
 
+  const images = [
+    {
+      src: "/zoomolCarousel/motorcycle1.png",
+      alt: "Roxx Premium 4T Motorcycle Oil",
+    },
+    {
+      src: "/zoomolCarousel/motorcycle2.png",
+      alt: "Zoomol Roxx LV 4T Oil",
+    },
+    {
+      src: "/zoomolCarousel/motorcycle3.png",
+      alt: "Zoomol Roxx Scooter Oil",
+    },
+    {
+      src: "/zoomolCarousel/motorcycle4.png",
+      alt: "Front Fork Oil",
+    },
+    {
+      src: "/zoomolCarousel/motorcycle5.png",
+      alt: "Front Fork Oil",
+    },
+  ];
+
+  const commercialImages = [
+    {
+      src: "/zoomolCarousel/commercialCarousel1.png",
+      alt: "Roxx Premium 4T Motorcycle Oil",
+    },
+    {
+      src: "/zoomolCarousel/commercialCarousel2.png",
+      alt: "Zoomol Roxx LV 4T Oil",
+    },
+    {
+      src: "/zoomolCarousel/commercialCarousel3.png",
+      alt: "Zoomol Roxx Scooter Oil",
+    },
+    {
+      src: "/zoomolCarousel/commercialCarousel4.png",
+      alt: "Front Fork Oil",
+    },
+    {
+      src: "/zoomolCarousel/commercialCarousel5.png",
+      alt: "Front Fork Oil",
+    },
+    {
+      src: "/zoomolCarousel/commercialCarousel6.png",
+      alt: "Front Fork Oil",
+    },
+  ];
+
+  const motoOilContent = [
+    {
+      title: "MOTORCYCLE & SCOOTER OIL",
+      description:
+        "Motorcycle and Scooter Oils are specially made for use in new generation Bikes and Gearless Scooters. The base oil and high-end additives allow the motorcycle & scooter oil to perform its vital function - lubricating the engine's moving parts to protect them against wear & tear, enhance power and acceleration, keep the engine clean, reduce sludge formation, carry away the heat and help in smooth engine function and enhance engine life. Understanding the specific requirements of the segment of Motor Cycle and Scooter oil, Raj Petro Specialities with its strong back up of ultramodern R&D Centres and the state-of-the-art manufacturing units have developed a wide range of high quality and performance-based motorcycle and scooter oils under the brand name of \"Roxx\" recommended for use in all Motorcycles and Scooter manufactured by major OEM's",
+      categories: [
+        {
+          title: "BIKE OILS",
+          items: [
+            "ZOOMOL ROXX PREMIUM 4T 20W-40 SN/MA2",
+            "ZOOMOL ROXX LV 4T 10W-30 SM/MA2",
+            "ZOOMOL ROXX PREMIUM 4T 15W-50 SM/MA2",
+          ],
+        },
+        {
+          title: "SCOOTER OILS",
+          items: ["ZOOMOL ROXX SCOOTER 10W-30 SN/MB"],
+        },
+        {
+          title: "SPECIALITY OILS",
+          items: ["FRONT FORK OIL"],
+        },
+      ],
+    },
+    {
+      title: "DIESEL ENGINE OILS",
+      description:
+        "High-performance diesel engine oils designed for both On Highway and Off Highway applications. These oils are formulated with premium base stocks and advanced additive technology to ensure excellent engine protection, cleaner operation, and longer drain intervals. Ideal for modern heavy-duty diesel engines that comply with emission norms and operate under high loads and severe conditions.",
+      categories: [
+        {
+          title: "ON HIGHWAY",
+          items: [
+            "ZOOMOL RFORCE 5100, 15W-40 CJ-4",
+            "ZOOMOL RFORCE 4100, 15W-40 CI-4 PLUS",
+            "ZOOMOL RFORCE XP PLUS, 15W-40 CI-4",
+            "ZOOMOL RFORCE TURBO PLUS, 15W-40 CH-4",
+            "ZOOMOL RFORCE TURBO, 15W-40 CF-4",
+            "ZOOMOL RFORCE MGX. 20W-40 CF-4",
+            "ZOOMOL RFORCE 6100 15W-40",
+          ],
+        },
+        {
+          title: "OFF HIGHWAY",
+          items: [
+            "ZOOMOL RFORCE 5100, 15W-40 CJ-4",
+            "ZOOMOL RFORCE 4100, 15W-40 CI-4 PLUS",
+            "ZOOMOL RFORCE XP PLUS, 15W-40 CI-4",
+            "ZOOMOL RFORCE TURBO PLUS, 15W-40 CH-4",
+            "ZOOMOL RFORCE TURBO, 15W-40 CF-4",
+            "ZOOMOL RFORCE MGX. 20W-40 CF-4",
+            "ZOOMOL RFORCE 6100 15W-40",
+          ],
+        },
+      ],
+    },
+  ];
+
   return (
     <>
       <ScrollToTop />
@@ -251,7 +384,7 @@ function Zoomol() {
               />
             </div>
             {/* Foreground Image & Title */}
-            <div className="relative  flex flex-col lg:flex-row items-center gap-4 lg:gap-8 lg:ml-64 px-4 z-30">
+            <div className="relative  flex flex-col min-h-full lg:flex-row items-center gap-4 lg:gap-8 lg:ml-64 px-4 z-30">
               <AnimatePresence mode="wait">
                 {tabImages[activeTabId] && (
                   <motion.img
@@ -286,7 +419,7 @@ function Zoomol() {
             </div>
 
             {/* Dot Navigation */}
-            <div className="absolute z-50 top-10 sm:top-20 right-4 sm:right-6 rotate-90 lg:rotate-90 lg:top-28 lg:-translate-x-1/2 flex space-x-2 sm:space-x-4">
+            <div className="absolute z-50 top-10 sm:top-20 right-4 sm:right-6 rotate-90 lg:rotate-90 lg:-right-10 lg:top-28 lg:-translate-x-1/2 flex space-x-2 sm:space-x-4">
               {tabsData.map((tab) => (
                 <div
                   key={tab.id}
@@ -309,7 +442,7 @@ function Zoomol() {
           </div>
         </div>
 
-        <div className=" max-w-7xl mx-auto md:h-screen h-fit ">
+        <div className=" max-w-7xl mx-auto  h-fit py-5 md:px-10 lg:py-5">
           <h2 className="md:text-4xl text-2xl px-4 md:px-0 poppins-semibold my-12">
             Future ready engine Oil and greases
           </h2>
@@ -341,21 +474,155 @@ function Zoomol() {
             engines in Indian driving condition, ensuring better engine
             maintenance, lower oil consumption, lesser wear and tear and
             ultimately lowering maintenance costs. Some of the top end Zoomol
-            Engine Oils have approval from Global OEM’s.
+            Engine Oils have approval from Global OEM’s
           </p>
         </div>
 
-        <div className="bg-gray-200 relative w-screen  h-fit flex justify-center items-center  ">
+        {/* <div className="bg-gray-200 relative w-screen  h-fit flex justify-center items-center  ">
           <CardSlider isSecondOne={false} />
-        </div>
+        </div> */}
+
+        {/* Carousel Zoomol Card */}
         <ZoomolCarousel images={cardDetails} />
-        <div className="bg-gray-200 w-screen h-fit flex justify-center items-center  ">
+        {/* <div className="bg-gray-200 w-screen h-fit flex justify-center items-center  ">
           <CardSlider isSecondOne={true} />
+        </div> */}
+
+        <div className="w-full h-fit bg-[#f0f0f0] py-10 px-10">
+          <div className="max-w-6xl mx-auto">
+            {motoOilContent
+              .slice(0, 1)
+              .map(({ title, description, categories }, i) => (
+                <React.Fragment key={i}>
+                  <div className="gap-5 flex flex-col">
+                    <h1 className="text-3xl underline font-semibold">
+                      {title}
+                    </h1>
+                    <p className="text-justify">{description}</p>
+                  </div>
+
+                  <div className="my-5 flex flex-row max-sm:flex-col-reverse">
+                    <div className="self-center">
+                      {categories.map((category, index) => (
+                        <div key={index}>
+                          <h1 className="text-[#da2616] text-lg font-semibold pb-2">
+                            {category.title}
+                          </h1>
+                          <div className="font-semibold space-y-2 py-2">
+                            {category.items.map((item, idx) => (
+                              <div
+                                className="flex flex-row space-x-2"
+                                key={idx}
+                                onClick={() => handleClick(item)}
+                              >
+                                <div className="w-3 h-3 rounded-full bg-red-500 self-center" />
+                                <p className="hover:underline">{item}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="md:flex-1 ml-8 h-[400px]">
+                      <ImageCarousel images={images} />
+                    </div>
+                  </div>
+                </React.Fragment>
+              ))}
+          </div>
         </div>
+
+        {/* Carousel Zoomol Card */}
         <ZoomolCarousel
           images={[...cardDetails.slice(3, 6), ...cardDetails.slice(0, 3)]}
         />
+
+        <div className="w-full h-fit bg-[#f0f0f0] py-10 px-10">
+          <div className="max-w-6xl mx-auto">
+            {motoOilContent
+              .slice(1, 2)
+              .map(({ title, description, categories }, i) => (
+                <React.Fragment key={i}>
+                  <div className="gap-5 flex flex-col">
+                    <h1 className="text-3xl underline font-semibold">
+                      {title}
+                    </h1>
+                    <p className="text-justify">{description}</p>
+                  </div>
+
+                  <div className="my-5 flex flex-row">
+                    <div className="self-center">
+                      {categories.map((category, index) => (
+                        <div key={index}>
+                          <h1 className="text-[#da2616] text-lg font-semibold pb-2">
+                            {category.title}
+                          </h1>
+                          <div className="font-semibold space-y-2 py-2">
+                            {category.items.map((item, idx) => (
+                              <div
+                                className="flex flex-row space-x-2"
+                                key={idx}
+                                onClick={() => handleClick(item)}
+                              >
+                                <div className="w-3 h-3 rounded-full bg-red-500 self-center" />
+                                <p className="hover:underline">{item}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="flex-1 ml-8 h-[400px] self-center">
+                      <ImageCarousel images={commercialImages} />
+                    </div>
+                  </div>
+                </React.Fragment>
+              ))}
+          </div>
+        </div>
       </div>
+
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent className="sm:max-w-4xl ">
+          <DialogHeader>
+            <DialogTitle className="w-40 ">
+              <img
+                className="w-full object-contain"
+                src="/brands-logo/zoomol.jpg"
+              />
+            </DialogTitle>
+            <DialogTitle className="font-bold text-2xl py-5">
+              {selectedTitle}
+            </DialogTitle>
+            <DialogTitle className="my-6">Description</DialogTitle>
+            <DialogDescription className="py-3">
+              Zoomol Zest MGX Super 5W-40 is synthetic passenger car motor oil
+              for gasoline and diesel engines formulated with latest API
+              additive technology to provide high performance and protection,
+              longer drain interval and increased engine life.
+              <br />
+              <br /> Zoomol Zest MGX Super 5W-40 meets the requirement of API
+              SN/SM/CF SAE 5W-40.
+              <br />
+              <br />
+              Zoomol Zest MGX Super 5W-40 is recommended for use in passenger’s
+              cars manufactured by leading OEMS and other manufacturer where
+              such type of oil is recommended.
+            </DialogDescription>
+          </DialogHeader>
+          {/* <div className="flex items-center space-x-2 ">
+            <div>
+              <button onClick={} className="bg-[#0066b2] text-white font-semibold py-4 px-10 rounded-lg shadow-md hover:bg-[#005a99] transition duration-300 flex items-center justify-center w-full sm:w-auto max-sm:py-5 max-sm:text-lg">
+                {" "}
+                Download PDF
+                <FiFileText className="ml-4" />
+              </button>
+            </div>
+          </div> */}
+        </DialogContent>
+      </Dialog>
     </>
   );
 }
