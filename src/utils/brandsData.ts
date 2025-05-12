@@ -1,112 +1,116 @@
 export const Data = [
   ///Rajol
-  {
-    id: 1,
-    name: "Rajol",
-    bannerImage: "/Brands/banner_rajol.png",
-    mainLogo: "/Rajol.png",
-    brochureLinks : ['/brochures/dummy.pdf'],
-    description: `<div> 
-              <p>Rajol White Oils are high-purity, severely refined mineral oils / liquid paraffins that consist of saturated aliphatic and alicyclic nonpolar hydrocarbons. These oils are hydrophobic, colourless, odourless, tasteless, biologically stable, and non-carcinogenic. These properties make white oils the standard in many industries. RAJOL White Oils conform to the most recent requirements of Pharmacopoeia (USP, BP, Ph. Eur, IP) and FDA monographs (USFDA). Custom-made White Oils catering to specific application requirements can be formulated on request. These oils are manufactured in GMP-certified, Kosher & Halal registered, ISO 9001:2015, 14001:2015, OHSAS 18001:2007 certified facilities.</p>
-            </div>`,
-    logo: [
-      {
-        img: "/brands-icons/Rajol_icon1.png",
-        imgName: "Moisture Resistant",
-      },
-      {
-        img: "/brands-icons/Rajol_icon2.png",
-        imgName: "Excellent Lubricity & Insulation",
-      },
-      {
-        img: "/brands-icons/Rajol_icon3.png",
-        imgName: "High Thermal & UV Stability",
-      },
-    ],
-    table: [
-      {
-        header: "Standards & Specifications ",
-        localCoordinates: ["IS:335:2018", "IS:12463"],
-        interNationalCoordinates: [
-          "EC 60296:2012",
-          "ASTM D3487:2016 JIS",
-          "AS CAN/CSA",
-          "DIN",
-          "ANP",
-          "BS",
-          "148",
-        ],
-        OEM: [
-          "EC 60296:2012",
-          "ASTM D3487:2016 JIS",
-          "AS CAN/CSA",
-          "DIN",
-          "ANP",
-          "BS",
-          "148",
-        ],
-        powerBoard: [
-          "PGCIL NTPC",
-          "Doble",
-          "EGAT",
-          "PLN",
-          "TEIAS",
-          "ERDA",
-          "CPRI",
-        ],
-      },
-    ],
-    Segments1: [
-      {
-        segmentName: " Technical Grade Oils",
-        productName: [
-          {
-            vname: "Rajol WT 60 / 70 / 80 / 100",
+  // {
+  //   id: 1,
+  //   name: "Rajol",
+  //   bannerImage: "/Brands/banner_rajol.png",
+  //   mainLogo: "/Rajol.png",
+  //   brochureLinks: ["/brochures/dummy.pdf"],
+  //   description: `<div>
+  //             <p>Rajol White Oils are high-purity, severely refined mineral oils / liquid paraffins that consist of saturated aliphatic and alicyclic nonpolar hydrocarbons. These oils are hydrophobic, colourless, odourless, tasteless, biologically stable, and non-carcinogenic. These properties make white oils the standard in many industries. RAJOL White Oils conform to the most recent requirements of Pharmacopoeia (USP, BP, Ph. Eur, IP) and FDA monographs (USFDA). Custom-made White Oils catering to specific application requirements can be formulated on request. These oils are manufactured in GMP-certified, Kosher & Halal registered, ISO 9001:2015, 14001:2015, OHSAS 18001:2007 certified facilities.</p>
+  //           </div>`,
+  //   logo: [
+  //     {
+  //       img: "/brands-icons/Rajol_icon1.png",
+  //       imgName: "Moisture Resistant",
+  //     },
+  //     {
+  //       img: "/brands-icons/Rajol_icon2.png",
+  //       imgName: "Excellent Lubricity & Insulation",
+  //     },
+  //     {
+  //       img: "/brands-icons/Rajol_icon3.png",
+  //       imgName: "High Thermal & UV Stability",
+  //     },
+  //   ],
+  //   table: [
+  //     {
+  //       header: "Standards & Specifications ",
+  //       localCoordinates: ["IS:335:2018", "IS:12463"],
+  //       interNationalCoordinates: [
+  //         "EC 60296:2012",
+  //         "ASTM D3487:2016 JIS",
+  //         "AS CAN/CSA",
+  //         "DIN",
+  //         "ANP",
+  //         "BS",
+  //         "148",
+  //       ],
+  //       OEM: [
+  //         "EC 60296:2012",
+  //         "ASTM D3487:2016 JIS",
+  //         "AS CAN/CSA",
+  //         "DIN",
+  //         "ANP",
+  //         "BS",
+  //         "148",
+  //       ],
+  //       powerBoard: [
+  //         "PGCIL NTPC",
+  //         "Doble",
+  //         "EGAT",
+  //         "PLN",
+  //         "TEIAS",
+  //         "ERDA",
+  //         "CPRI",
+  //       ],
+  //     },
+  //   ],
+  //   Segments1: [
+  //     {
+  //       segmentName: " Technical Grade Oils",
+  //       productName: [
+  //         {
+  //           vname: "Rajol WT 60 / 70 / 80 / 100",
 
-            productDescription: `<h1>RAJOL® WT Oils are severely refined hydro-cracked / hydro-treated technical grade white mineral oils of the highest quality and are highly stable.</h1>`,
-          },
-          {
-            vname: "Rajol WT 150",
+  //           productDescription: `<h1>RAJOL® WT Oils are severely refined hydro-cracked / hydro-treated technical grade white mineral oils of the highest quality and are highly stable.</h1>`,
+  //         },
+  //         {
+  //           vname: "Rajol WT 150",
 
-            productDescription: `<h1>RAJOL® WT Oils are severely refined hydro-cracked / hydro-treated technical grade white mineral oils of the highest quality and are highly stable.</h1>`,
-          },
-          {
-            vname: "Rajol WT 500",
+  //           productDescription: `<h1>RAJOL® WT Oils are severely refined hydro-cracked / hydro-treated technical grade white mineral oils of the highest quality and are highly stable.</h1>`,
+  //         },
+  //         {
+  //           vname: "Rajol WT 500",
 
-            productDescription: `<h1>RAJOL® WT Oils are severely refined hydro-cracked / hydro-treated technical grade white mineral oils of the highest quality and are highly stable.</h1>`,
-          },
-        ],
-      },
-      {
-        segmentName: "Pharma Grade Oils",
-        productName: [
-          {
-            vname: "Rajol WP 60 / 70 / 100 / 150",
+  //           productDescription: `<h1>RAJOL® WT Oils are severely refined hydro-cracked / hydro-treated technical grade white mineral oils of the highest quality and are highly stable.</h1>`,
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       segmentName: "Pharma Grade Oils",
+  //       productName: [
+  //         {
+  //           vname: "Rajol WP 60 / 70 / 100 / 150",
 
-            productDescription: `<h1>RAJOL® WP Oils are severely refined hydro-cracked / hydro-treated oils with highest degree of purity and are stabilized with suitable additives for oxidation/UV stability. These oils are suitable for Pharmaceutical, Cosmetic and Food industries, for direct & indirect food contact</h1>`,
-          },
-          {
-            vname: "Rajol WP 110",
+  //           productDescription: `<h1>RAJOL® WP Oils are severely refined hydro-cracked / hydro-treated oils with highest degree of purity and are stabilized with suitable additives for oxidation/UV stability. These oils are suitable for Pharmaceutical, Cosmetic and Food industries, for direct & indirect food contact</h1>`,
+  //         },
+  //         {
+  //           vname: "Rajol WP 110",
 
-            productDescription: `<h1>RAJOL® WP 110 Oils are severely refined hydro-cracked / hydro-treated oils with highest degree of purity and are stabilized with suitable additives for oxidation/UV stability. These oils are suitable for Pharmaceutical, Cosmetic and Food industries, for direct & indirect food contact</h1>`,
-          },
-          {
-            vname: "Rajol WP 350 / 500",
+  //           productDescription: `<h1>RAJOL® WP 110 Oils are severely refined hydro-cracked / hydro-treated oils with highest degree of purity and are stabilized with suitable additives for oxidation/UV stability. These oils are suitable for Pharmaceutical, Cosmetic and Food industries, for direct & indirect food contact</h1>`,
+  //         },
+  //         {
+  //           vname: "Rajol WP 350 / 500",
 
-            productDescription: `<h1>RAJOL® WP Oils are severely refined hydro-cracked / hydro-treated oils with highest degree of purity and are stabilized with suitable additives for oxidation/UV stability. These oils are suitable for Pharmaceutical, Cosmetic and Food industries, for direct & indirect food contact</h1>`,
-          },
-        ],
-      },
-    ],
-  },
+  //           productDescription: `<h1>RAJOL® WP Oils are severely refined hydro-cracked / hydro-treated oils with highest degree of purity and are stabilized with suitable additives for oxidation/UV stability. These oils are suitable for Pharmaceutical, Cosmetic and Food industries, for direct & indirect food contact</h1>`,
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   /////////Electrol
   {
     id: 2,
     name: "Electrol",
-    brochureLinks : ['/brochures/Electrol Brochures.zip'],
+    brochureLinks: ["/brochures/Electrol Brochures.zip"],
     bannerImage: "/Brands/electrol_banner.jpg",
     video: "/brand_videos/Electrol&Bio-electrol.mp4",
     mainLogo: "/electrol.png",
+    helmet: {
+      helmetTitle: `Electrol & BioElectrol | Premium Transformer and Dielectric Fluids`,
+      description: `Explore Electrol and BioElectrol by Raj Petro—specialty fluids engineered for transformers, power equipment, and sustainable energy systems worldwide.`,
+    },
     description: `<div>
               <p style="margin-bottom: 16px;">A range of high-performance insulating oils is recognized as a leading brand within the Power Industry. Recognizing the varied requirements for different applications and catering to various equipment like Ultra High Voltage transformers, Large and Medium Power Transformers, Distribution transformers, Instrument transformers, etc. ELECTROL premium insulating oils are offered in many grades to satisfy and exceed the adequacies of various applications. ELECTROL insulating oils are manufactured by adopting the latest state-of-the-art technology in ISO certified facilities with the support of NABL-accredited Laboratories. 
 
@@ -411,10 +415,14 @@ ELECTROL premium insulating oils perform exceedingly well in key performance cri
   {
     id: 3,
     name: "Kyros",
-    brochureLinks : ['/brochures/Kyros Brochures.zip'],
+    brochureLinks: ["/brochures/Kyros Brochures.zip"],
     bannerImage: "/Brands/kyros_web_banner.jpeg",
     video: "/brand_videos/Kyros.mp4",
     mainLogo: "/kyros.png",
+    helmet: {
+      helmetTitle: `Kyros | Advanced Industrial Lubricants & Fluids`,
+      description: ` Kyros offers next-generation industrial oils and greases that deliver efficiency, longevity, and environmental safety.`,
+    },
     description: `<div>
               <p style="margin-bottom: 16px;">KYROS in Greek, meaning “Leader / Master”, is a complete range of high-performance & technologically advanced Lubricants and Fluids formulated from high-end base oils and fortified with advanced additive technology. KYROS products are made to meet the international quality standards through QMS and today’s demanding applications, and tested to meet the machine manufacturer’s requirements. KYROS is a leading brand in metalworking and industrial fluids and the broad categories of products include Hydraulic & Machinery Oils, Metalworking Oils & Fluids, Corrosion Preventives, Textile Specialties, Turbine Oils, Heat Transfer Oils, Compressor Oils, Energy Saving Lubricants, Environment Friendly Lubricants, Refrigeration Oils, Cleaners and Greases and Coolants. </p>
               <p>KYROS brand products are extensively used in industries such as Auto OEM & Ancillary, Construction & Mining, Steel & Metal, Engineering, Textile, Power Sector, and many more, wherein the products are highly suitable for application. 
@@ -1451,11 +1459,15 @@ compressors.
   {
     id: 4,
     name: "stansol",
-    brochureLinks : ['/brochures/dummy.pdf' , ],
+    brochureLinks: ["/brochures/Stansol.zip"],
     bannerImage: "/Brands/banner_stansol.png",
     mainLogo: "/Stansol.png",
+    helmet: {
+      helmetTitle: `Stansol | Hydrocarbon Solvents & Cleaning Solutions`,
+      description: `Stansol features precision-engineered solvents for cleaning, formulation, and industrial processing applications.`,
+    },
     description: `<div>
-              <p>Stansol is the range of solvents produced from carefully selected feedstocks and is free of chlorinated and glycol ether components. Stansol range consists of De-Aromatised and Aromatised solvents and is widely used in the Petroleum & Offshore and Power Sector industries. 
+              <p>STANSOL is the range of solvents produced from carefully selected feedstocks and is free of chlorinated and glycol ether components. STANSOL range consists of De-Aromatised and Aromatised solvents and is widely used in the Petroleum & Offshore and Power Sector industries. 
 
   
               </p>
@@ -1605,12 +1617,16 @@ compressors.
     bannerImage: "/Brands/onwo_banner.jpg",
     video: "/brand_videos/Onwo.mp4",
     mainLogo: "/Onwo.png",
+    helmet: {
+      helmetTitle: `Onwo | White Oils for Pharma, Cosmetics & Food`,
+      description: `Onwo provides high-purity white mineral oils formulated for pharmaceuticals, personal care, and food-grade applications.`,
+    },
     description: `<div> 
-              <p>Onwo range of high-performance specialty products includes specially formulated Greases and Oils based on synthetic and VHVI base oil to meet international standards. Developed with technology from the U.K., Onwo products are manufactured at the Company’s state-of-the-art production unit. Designed to offer effective solutions to difficult lubrication and maintenance needs of the industry, Onwo products withstand extremes of temperatures, high and shock loading, vibrations, and high speed under dusty, wet, saturated, and chemically corrosive environments. 
+              <p>ONWO range of high-performance specialty products includes specially formulated Greases and Oils based on synthetic and VHVI base oil to meet international standards. Developed with technology from the U.K., ONWO products are manufactured at the Company’s state-of-the-art production unit. Designed to offer effective solutions to difficult lubrication and maintenance needs of the industry, ONWO products withstand extremes of temperatures, high and shock loading, vibrations, and high speed under dusty, wet, saturated, and chemically corrosive environments. 
 </p>
 <br/>
 <p>
-By extending the service life of lubricant as well as components, these products are designed as perpetual problem solvers that result in substantial cost savings and increased production, as compared to limited life achieved with conventional commodity products. Onwo products have been tested and proven in harsh conditions where normal Industrial Lubricants have failed to lubricate. The performance plus products include a complete range of greases & oils, designed to meet the extreme conditions of lubrication in steel, cement, mining, construction, power & automotive industry. </p>
+By extending the service life of lubricant as well as components, these products are designed as perpetual problem solvers that result in substantial cost savings and increased production, as compared to limited life achieved with conventional commodity products. ONWO products have been tested and proven in harsh conditions where normal Industrial Lubricants have failed to lubricate. The performance plus products include a complete range of greases & oils, designed to meet the extreme conditions of lubrication in steel, cement, mining, construction, power & automotive industry. </p>
             </div>`,
     link: "https://youtu.be/Y0VQrwNcOLY?feature=shared",
     logo: [
@@ -2053,118 +2069,122 @@ performance under high loads, over wide operating temperatures. </p>
     ],
   },
   ///////Rajell
-  {
-    id: 6,
-    name: "Rajell",
-    brochureLinks : ['/brochures/dummy.pdf' ],
-    bannerImage: "/Brands/banner_rajell.png",
-    mainLogo: "/rajell.png",
-    description: `<div> 
-              <p style="margin-bottom: 16px;">RAJELL® White Petroleum Jellies are state-of-the-art products of ultra-high purity designed for a variety of applications in the cosmetic, pharmaceutical, personal Health care, food, and industrial applications. </p>
-              <p>RAJELL® White Petroleum Jellies, processed from highly refined paraffinic mineral oils and gelling agents, are chemically and biologically inert products that provide excellent bases for a diverse range of formulated products requiring high levels of purity and compatibility in sensitive applications. Manufactured under a stringent and closely controlled environment facility using the highest quality ingredients and materials, RAJELL® White Petroleum Jellies are available in a variety of grades and specifications including the USFDA 21 CFR, Indian, US, British, German, Japanese, and other pharmacopeia standards.</p>
-            </div>`,
-    logo: [
-      {
-        img: "/brands-icons/Rajell_icon1.png",
-        imgName: "Odourless, Tasteless",
-      },
-      {
-        img: "/brands-icons/Rajell_icon2.png",
-        imgName: "Low Viscosity Index",
-      },
-      {
-        img: "/brands-icons/Rajell_icon3.png",
-        imgName: "High Thermal & UV Stability",
-      },
-    ],
-    table: [
-      {
-        header: "Standards & Specifications ",
-        localCoordinates: ["IS:335:2018", "IS:12463"],
-        interNationalCoordinates: [
-          "EC 60296:2012",
-          "ASTM D3487:2016 JIS",
-          "AS CAN/CSA",
-          "DIN",
-          "ANP",
-          "BS",
-          "148",
-        ],
-        OEM: [
-          "EC 60296:2012",
-          "ASTM D3487:2016 JIS",
-          "AS CAN/CSA",
-          "DIN",
-          "ANP",
-          "BS",
-          "148",
-        ],
-        powerBoard: [
-          "PGCIL NTPC",
-          "Doble",
-          "EGAT",
-          "PLN",
-          "TEIAS",
-          "ERDA",
-          "CPRI",
-        ],
-      },
-    ],
-    Segments1: [
-      {
-        segmentName: "British Pharmacopoeia (bp) / Us Pharmacopoeia (usp)",
-        productName: [
-          {
-            vname: "Rajell 10AE3",
-            productDescription: `<div>
-              <p>RAJELL® UWP 10AE3 Ultra White Petroleum Jelly, are odourless, tasteless, homogenous mixtures of long chain oil & waxy hydrocarbons. RAJELL® UWP 10AE3 Ultra White Petroleum Jelly possess highest degree of purity and are available in a wide range of grades to suit various applications.</p>
-            </div>`,
-          },
-        ],
-      },
-      {
-        segmentName: "Ip/ Bp/ Usp",
-        productName: [
-          {
-            vname: "Rajell YPJ",
-            productDescription: `<div>
-              <p>RAJELL® Yellow Petroleum Jelly-IP, is an odorless, tasteless, homogenous mixtures of long chain oil & waxy hydrocarbons.</p>
-              <p>RAJELL® Yellow Petroleum Jelly-IP is a normal viscosity, medium fiber jelly which possess the highest degree of purity.</p>
-            </div>`,
-          },
-        ],
-      },
-      {
-        segmentName: "Indian Pharmacopoeia (ip)",
-        productName: [
-          {
-            vname: "Rajell WPS8111",
-            productDescription: ``,
-          },
-        ],
-      },
-    ],
-  },
+  // {
+  //   id: 6,
+  //   name: "Rajell",
+  //   brochureLinks: ["/brochures/dummy.pdf"],
+  //   bannerImage: "/Brands/banner_rajell.png",
+  //   mainLogo: "/rajell.png",
+  //   description: `<div>
+  //             <p style="margin-bottom: 16px;">RAJELL® White Petroleum Jellies are state-of-the-art products of ultra-high purity designed for a variety of applications in the cosmetic, pharmaceutical, personal Health care, food, and industrial applications. </p>
+  //             <p>RAJELL® White Petroleum Jellies, processed from highly refined paraffinic mineral oils and gelling agents, are chemically and biologically inert products that provide excellent bases for a diverse range of formulated products requiring high levels of purity and compatibility in sensitive applications. Manufactured under a stringent and closely controlled environment facility using the highest quality ingredients and materials, RAJELL® White Petroleum Jellies are available in a variety of grades and specifications including the USFDA 21 CFR, Indian, US, British, German, Japanese, and other pharmacopeia standards.</p>
+  //           </div>`,
+  //   logo: [
+  //     {
+  //       img: "/brands-icons/Rajell_icon1.png",
+  //       imgName: "Odourless, Tasteless",
+  //     },
+  //     {
+  //       img: "/brands-icons/Rajell_icon2.png",
+  //       imgName: "Low Viscosity Index",
+  //     },
+  //     {
+  //       img: "/brands-icons/Rajell_icon3.png",
+  //       imgName: "High Thermal & UV Stability",
+  //     },
+  //   ],
+  //   table: [
+  //     {
+  //       header: "Standards & Specifications ",
+  //       localCoordinates: ["IS:335:2018", "IS:12463"],
+  //       interNationalCoordinates: [
+  //         "EC 60296:2012",
+  //         "ASTM D3487:2016 JIS",
+  //         "AS CAN/CSA",
+  //         "DIN",
+  //         "ANP",
+  //         "BS",
+  //         "148",
+  //       ],
+  //       OEM: [
+  //         "EC 60296:2012",
+  //         "ASTM D3487:2016 JIS",
+  //         "AS CAN/CSA",
+  //         "DIN",
+  //         "ANP",
+  //         "BS",
+  //         "148",
+  //       ],
+  //       powerBoard: [
+  //         "PGCIL NTPC",
+  //         "Doble",
+  //         "EGAT",
+  //         "PLN",
+  //         "TEIAS",
+  //         "ERDA",
+  //         "CPRI",
+  //       ],
+  //     },
+  //   ],
+  //   Segments1: [
+  //     {
+  //       segmentName: "British Pharmacopoeia (bp) / Us Pharmacopoeia (usp)",
+  //       productName: [
+  //         {
+  //           vname: "Rajell 10AE3",
+  //           productDescription: `<div>
+  //             <p>RAJELL® UWP 10AE3 Ultra White Petroleum Jelly, are odourless, tasteless, homogenous mixtures of long chain oil & waxy hydrocarbons. RAJELL® UWP 10AE3 Ultra White Petroleum Jelly possess highest degree of purity and are available in a wide range of grades to suit various applications.</p>
+  //           </div>`,
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       segmentName: "Ip/ Bp/ Usp",
+  //       productName: [
+  //         {
+  //           vname: "Rajell YPJ",
+  //           productDescription: `<div>
+  //             <p>RAJELL® Yellow Petroleum Jelly-IP, is an odorless, tasteless, homogenous mixtures of long chain oil & waxy hydrocarbons.</p>
+  //             <p>RAJELL® Yellow Petroleum Jelly-IP is a normal viscosity, medium fiber jelly which possess the highest degree of purity.</p>
+  //           </div>`,
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       segmentName: "Indian Pharmacopoeia (ip)",
+  //       productName: [
+  //         {
+  //           vname: "Rajell WPS8111",
+  //           productDescription: ``,
+  //         },
+  //       ],
+  //     },
+  //   ],
+  // },
   //////Rajprol
   {
     id: 7,
     name: "Rajprol",
     bannerImage: "/Brands/rajprol_banner.jpg",
-    brochureLinks : ['/brochures/Rawax & Rajprol Broucher v2 copy.pdf' ],
+    brochureLinks: ["/brochures/Rawax & Rajprol Broucher v2 copy.pdf"],
     // video: "/brand_videos/Rajprol&Rawax1.mp4",
     video: "/brand_videos/Rajprol&Rawax.mp4",
+    helmet: {
+      helmetTitle: `RajProl | Industrial Protective Lubricants by Raj Petro`,
+      description: `RajProl delivers high-performance protection with anti-corrosion oils and rust preventives suited for metalworking and machinery.`,
+    },
     mainLogo: "/Rajprol.png",
     link: "https://youtu.be/kbU2V4Ell6Q?si=IAesvYmtTjGdnjLb",
     description: `<div> 
-              <p>Rajprol Rubber Processing Oils are superior blends of aromatic and aliphatic components designed for the processing of rubber and related polymers. Rajprol Oils are classified as Aromatic, Paraffinic, Naphthenic, and Special Grades depending on the chemical nature of the predominant constituent. </p>
+              <p>RAJRPOL Rubber Processing Oils are superior blends of aromatic and aliphatic components designed for processing of rubber and related polymers. RAJRPOL Oils are classified as Aromatic, Paraffinic, Naphthenic and Special Grades depending on the chemical nature of the predominant constituent. </p>
             <h1 style="font-size: 20px; text-decoration:underline; margin-top: 16px;"> AROMATIC PROCESS OILS </h1>
-                <p>Aromatic Process Oils have higher solvency and superior compatibility with most rubber polymers. These oils exhibit low volatility and high viscosity for improved productivity and safety standards. </p>
-            <h1 style="font-size: 20px; text-decoration:underline ; margin-top: 10px;">PARAFFINIC PROCESS OILS </h1>
-                <p>Paraffinic Process Oils are highly refined oils that have low solvency and high aniline point with low aromaticity, excellent colour, oxidation & thermal stability, and also elastomer compatibility. </p>
-            <h1 style="font-size: 20px; text-decoration:underline; margin-top: 10px;">NAPHTHENIC PROCESS OILS </h1>
-                <p>Naphthenic Process Oils exhibit high solvency, good thermal stability, excellent compatibility, and non-staining properties. </p>
-            <h1 style="font-size: 20px; text-decoration:underline; margin-top: 10px;">SPECIAL GRADE PROCESS OILS </h1>
-                <p>Special Grades Process Oils are produced by blending of judiciously selected base stocks, resulting in oils of specific characteristics. These series of oils are guaranteed to meet with Poly Cyclic Aromatic Hydrocarbon (PAH) limits specified by 1907/2006/EC, Annex XVII, Entry 50 (REACH), formerly EU directive 200/69/EC. </p>
+                <p>Aromatic Process Oils have higher solvency and superior compatibility with most rubber polymers. These oils exhibit low volatility and high viscosity for improved productivity and safety standards.</p>
+            <h1 style="font-size: 20px; text-decoration:underline ; margin-top: 10px;">PARAFFINIC PROCESS OILS</h1>
+                <p>Paraffinic Process Oils are highly refined oils that have low solvency and high aniline point with low aromaticity, excellent colour, oxidation & thermal stability and also elastomer compatibility. </p>
+            <h1 style="font-size: 20px; text-decoration:underline; margin-top: 10px;">NAPHTHENIC PROCESS OILS  </h1>
+                <p>Naphthenic Process Oils exhibit high solvency, good thermal stability, excellent compatibility and non-staining properties. </p>
+            <h1 style="font-size: 20px; text-decoration:underline; margin-top: 10px;">SPECIAL GRADE PROCESS OILS Low PAH Oils </h1>
+                <p>Special Grades Process Oils are produced by blending of judiciously selected base stocks resulting in oils of specific characteristics. These series of oils are guaranteed to meet with Poly Cyclic Aromatic Hydrocarbon (PAH) limits specified by 1907/2006/EC, Annex XVII, Entry 50 (REACH), formerly EU directive 2005/69/EC </p>
             </div>`,
     logo: [
       {
@@ -2215,6 +2235,53 @@ performance under high loads, over wide operating temperatures. </p>
     ],
     Segments1: [
       {
+        segmentName: "SPECIAL GRADE PROCESS OILS ",
+        productName: [
+          {
+            vname: "Rajprol P1/E - ",
+            productDescription: `<div>
+              <p>RAJPROL P1/E is produced by blending of judiciously selected base stocks resulting in oil of specific characteristics. This oil is guaranteed to meet with Polycyclic Aromatic hydrocarbon (PAH) limits specified by 1907/2006/EC, Annex XVII, Entry 50 (REACH), formerly EU directive 2005/69/EC. This oil used as a processing aid in rubber compounding </p>
+            </div>`,
+          },
+          {
+            vname: "Rajprol N2/E -  ",
+            productDescription: `<div>
+              <pRAJPROL® N2/E is produced by blending of judiciously selected base stocks resulting in oil of specific characteristics. This oil is guaranteed to meet with Polycyclic Aromatic hydrocarbon (PAH) limits specified by 1907/2006/EC, Annex XVII, Entry 50 (REACH), formerly EU directive 2005/69/EC. This oil used as a processing aid in rubber compounding</p>
+            </div>`,
+          },
+          {
+            vname: "Rajprol P1500/E2 - ",
+            productDescription: `<div>
+                        <p>RAJPROL® P1500/E2 is produced by blending of judiciously selected base stocks resulting in oil of specific characteristics. This oil is guaranteed to meet with Polycyclic Aromatic hydrocarbon (PAH) limits specified by 1907/2006/EC, Annex XVII, Entry 50 (REACH), formerly EU directive 2005/69/EC. This oil used as a processing aid in rubber compounding</p>
+                      </div>`,
+          },
+          {
+            vname: "Rajprol 460P/E – ",
+            productDescription: `<div>
+                        <p>RAJPROL® 460P/E is produced by blending of judiciously selected base stocks resulting in oil of specific characteristics. This oil is guaranteed to meet with Polycyclic Aromatic hydrocarbon (PAH) limits specified by 1907/2006/EC, Annex XVII, Entry 50 (REACH), formerly EU directive 2005/69/EC. This oil used as a processing aid in rubber compounding</p>
+                      </div>`,
+          },
+          {
+            vname: " Rajprol P3700/E -  ",
+            productDescription: `<div>
+                        <p>RAJPROL® P3700/E is produced by blending of judiciously selected base stocks resulting in oil of specific characteristics. This oil is guaranteed to meet with Polycyclic Aromatic hydrocarbon (PAH) limits specified by 1907/2006/EC, Annex XVII, Entry 50 (REACH), formerly EU directive 2005/69/EC. This oil used as a processing aid in rubber compounding</p>
+                      </div>`,
+          },
+          {
+            vname: " Rajprol P3500/E -  ",
+            productDescription: `<div>
+                        <p>RAJPROL® P3500/E is produced by blending of judiciously selected base stocks resulting in oil of specific characteristics. This oil is guaranteed to meet with Polycyclic Aromatic hydrocarbon (PAH) limits specified by 1907/2006/EC, Annex XVII, Entry 50 (REACH), formerly EU directive 2005/69/EC. This oil used as a processing aid in rubber compounding</p>
+                      </div>`,
+          },
+          {
+            vname: " Rajprol P5900/E -  ",
+            productDescription: `<div>
+                        <p>RAJPROL® P5900/E is produced by blending of judiciously selected base stocks resulting in oil of specific characteristics. This oil is guaranteed to meet with Polycyclic Aromatic hydrocarbon (PAH) limits specified by 1907/2006/EC, Annex XVII, Entry 50 (REACH), formerly EU directive 2005/69/EC. This oil used as a processing aid in rubber compounding</p>
+                      </div>`,
+          },
+        ],
+      },
+      {
         segmentName: "Paraffinic Process Oils",
         productName: [
           {
@@ -2251,13 +2318,13 @@ performance under high loads, over wide operating temperatures. </p>
             productDescription: `<div>
               <p>RAJPROL® NN22 oil is a light coloured, highly refined oil produced blending of judiciously selected base stocks which ensures that the oil have higher Naphthenic carbon content. This oil exhibit excellent compatibility, good colour stability and non-staining properties. </p></div>`,
           },
+          // {
+          //   vname: "Rajprol NN22/E1",
+          //   productDescription: `<div>
+          //     <p>RAJPROL® NN22/E1 oil is a light coloured, highly refined oil produced blending of judiciouslyselected base stocks which ensures that the oil have higher Naphthenic carbon content. Thisoil exhibit excellent compatibility, good colour stability and non-staining properties. </p></div>`,
+          // },
           {
-            vname: "Rajprol NN22/E1",
-            productDescription: `<div>
-              <p>RAJPROL® NN22/E1 oil is a light coloured, highly refined oil produced blending of judiciouslyselected base stocks which ensures that the oil have higher Naphthenic carbon content. Thisoil exhibit excellent compatibility, good colour stability and non-staining properties. </p></div>`,
-          },
-          {
-            vname: "Rajprol 150/E1",
+            vname: "Rajprol NN 150/E1",
             productDescription: `<div>
               <p>RAJPROL NN150/E1 oil is a light coloured, highly refined oil produced blending of judiciously selected base stocks which ensures that the oil have higher Naphthenic carbon content. This oil exhibit excellent compatibility, good colour stability and non-staining properties.</p></div>`,
           },
@@ -2301,9 +2368,9 @@ performance under high loads, over wide operating temperatures. </p>
             </div>`,
           },
           {
-            vname: "Rajprol 12/P",
+            vname: "Rajprol WT12/M",
             productDescription: `<div>
-              <p>RAJPROL® 12/P oil is a Process Oil, suitable for processing industries for various applications. This oil can also be used in Rubber Processing Industries.</p>
+              <p>RAJPROL® WT12/M oil is a Process Oil, suitable for processing industries for various applications. This oil can also be used in Rubber Processing Industries.</p>
             </div>`,
           },
           {
@@ -2354,6 +2421,24 @@ performance under high loads, over wide operating temperatures. </p>
               <p>RAJPROL® SBF 8 is a highly refined oil with nil Aromatics and having excellent oxidation & thermal stability.</p>
             </div>`,
           },
+          {
+            vname: "Rajprol WT500 ",
+            productDescription: `<div>
+              <p>RAJPROL® WT500 is a severely refined paraffinic oil and have an excellent oxidation & thermal stability. The oil exhibits high viscosity index, and it is suitable for various applications in lubricants & other processing industries. </p>
+            </div>`,
+          },
+          {
+            vname: "Rajprol P8/I ",
+            productDescription: `<div>
+              <p>RAJPROL® P8/I is a severely refined paraffinic oil. It carries excellent oxidation & thermal stability. The oil exhibits high viscosity index & it is suitable for various applications in lubricants & other processing Industries.</p>
+            </div>`,
+          },
+          {
+            vname: "Rajprol T8 ",
+            productDescription: `<div>
+              <p>RAJPROL® T8 is a general-purpose oil and suitable for various applications in lubricants & other processing industries. </p>
+            </div>`,
+          },
         ],
       },
     ],
@@ -2363,7 +2448,11 @@ performance under high loads, over wide operating temperatures. </p>
     id: 8,
     name: "Rawax",
     video: "/brand_videos/Rajprol&Rawax.mp4",
-    brochureLinks : ['/brochures/Rawax & Rajprol Broucher v2 copy.pdf' ],
+    helmet: {
+      helmetTitle: `Rawax | Specialty Waxes for Multiple Industries`,
+      description: `Rawax offers high-quality waxes tailored for applications in textiles, packaging, construction, and cosmetics.`,
+    },
+    brochureLinks: ["/brochures/Rawax & Rajprol Broucher v2 copy.pdf"],
     bannerImage: "/Brands/rawax_banner.jpg",
     mainLogo: "/Rawax.png",
     link: "https://youtu.be/kbU2V4Ell6Q?si=IAesvYmtTjGdnjLb",
@@ -2447,12 +2536,16 @@ performance under high loads, over wide operating temperatures. </p>
     id: 9,
     name: "Agrispray oils",
     bannerImage: "/Brands/kyros_web_banner.jpeg",
-    brochureLinks : ['/brochures/dummy.pdf' ],
+    brochureLinks: ["/brochures/dummy.pdf"],
     video: "/brand_videos/agrispray.mp4",
     mainLogo: "/transparent-brands-logo/agrispray.png",
+    helmet: {
+      helmetTitle: `AgriSpray Oils | Crop Protection & Spray Adjuvants`,
+      description: `Discover AgriSpray Oils, a specialized range designed to improve agrochemical efficacy and support sustainable farming practices. `,
+    },
     description: `
-              <p style="margin-bottom: 16px;">RAJ Agrispray Oils – a wide range of agricultural mineral oil (AMO) & horticultural mineral oil (HMO) are farmer-friendly, environmentally safe solutions designed to fit perfectly into Integrated Pest Management (IPM) strategies. These biodegradable, non-toxic, and low-residue spray oils offer effective pest control without compromising soil health, water safety, or beneficial insect populations. Whether you're managing bananas, tea, vegetables, or orchards, Agrispray Oils help you farm smarter and cleaner. </p>
-              <p style="margin-bottom: 16px;">Engineered using high-purity paraffinic oils and bio-safe emulsifiers, these oils enhance the effectiveness of your fungicides, insecticides, and herbicides while reducing chemical load and resistance build up in pests. Certified by trusted bodies like NRCB, UPASI-TRF, and USOCA, Agrispray Oils are a smart choice for organic, sustainable, and export-focused farming. </p>
+              <p style="margin-bottom: 16px;">RAJ AGRISPRAY OILS – a wide range of agricultural mineral oil (AMO) & horticultural mineral oil (HMO) are farmer-friendly, environmentally safe solutions designed to fit perfectly into Integrated Pest Management (IPM) strategies. These biodegradable, non-toxic, and low-residue spray oils offer effective pest control without compromising soil health, water safety, or beneficial insect populations. Whether you're managing bananas, tea, vegetables, or orchards, AGRISPRAY OILS help you farm smarter and cleaner. </p>
+              <p style="margin-bottom: 16px;">Engineered using high-purity paraffinic oils and bio-safe emulsifiers, these oils enhance the effectiveness of your fungicides, insecticides, and herbicides while reducing chemical load and resistance build up in pests. Certified by trusted bodies like NRCB, UPASI-TRF, and USOCA, AGRISPRAY OILS are a smart choice for organic, sustainable, and export-focused farming. </p>
    `,
     link: "https://youtu.be/oWRO6UK6yG0?feature=shared",
     logo: [

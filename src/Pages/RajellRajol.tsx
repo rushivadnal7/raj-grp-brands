@@ -25,8 +25,8 @@ import {
 } from "@/components/ui/form";
 import axios from "axios";
 import { toast } from "sonner";
+import { Helmet } from "react-helmet";
 import { RajelRajolData } from "@/utils/RajellRajpolData";
-// import { RajelRajolData } from "@/utils/RajelAndRajolData";
 
 
 const formSchema = z.object({
@@ -162,6 +162,13 @@ const RajelRajol = () => {
 
   return (
     <>
+      <Helmet>
+        <title>{brandData.helmet.helmetTitle}</title>
+        <meta
+          name="description"
+          content={brandData.helmet.description}
+        />
+      </Helmet>;
       <div className="bg-white">
         <div className="h-full relative">
           <img
@@ -180,13 +187,12 @@ const RajelRajol = () => {
                 <img
                   src={brandData.mainLogo}
                   alt=""
-                  className={`object-center h-[70px] lg:h-[100px]  mx-5  ${
-                    brandData.mainLogo === "/electrol.png" ||
-                    brandData.mainLogo ===
+                  className={`object-center h-[70px] lg:h-[100px]  mx-5  ${brandData.mainLogo === "/electrol.png" ||
+                      brandData.mainLogo ===
                       "/transparent-brands-logo/agrispray.png"
                       ? "md:w-96 w-60 object-contain "
                       : ""
-                  }`}
+                    }`}
                 />
                 {/* <h1>{brandData.name}</h1> */}
               </div>
@@ -326,11 +332,11 @@ const RajelRajol = () => {
                   {["kyros", "onwo", "zoomol"].includes(
                     brandData.name?.toLowerCase()
                   ) && (
-                    <button className="bg-[#0066b2] text-white font-semibold py-4 max-sm:py-6 px-4 rounded-lg shadow-md hover:bg-[#005a99] transition duration-300 flex items-center justify-center w-full sm:w-auto text-sm max-sm:text-base">
-                      Product Data Sheet
-                      <Download className="ml-2 size-5" />
-                    </button>
-                  )}
+                      <button className="bg-[#0066b2] text-white font-semibold py-4 max-sm:py-6 px-4 rounded-lg shadow-md hover:bg-[#005a99] transition duration-300 flex items-center justify-center w-full sm:w-auto text-sm max-sm:text-base">
+                        Product Data Sheet
+                        <Download className="ml-2 size-5" />
+                      </button>
+                    )}
 
                   {brandData.link && (
                     <a
@@ -444,29 +450,26 @@ const RajelRajol = () => {
                             className="w-full sm:w-[calc(50%-1.5rem)] md:w-[calc(33.33%-1.5rem)]"
                           >
                             <div
-                              className={`flex items-center justify-start cursor-pointer ${
-                                visibleProductIndex === productIndex
+                              className={`flex items-center justify-start cursor-pointer ${visibleProductIndex === productIndex
                                   ? "font-bold"
                                   : ""
-                              }`}
+                                }`}
                               onClick={() =>
                                 toggleProductDescription(productIndex)
                               }
                             >
                               <span
-                                className={`flex items-center poppins-semibold ${
-                                  visibleProductIndex === productIndex
+                                className={`flex items-center poppins-semibold ${visibleProductIndex === productIndex
                                     ? "text-[#046fbb]"
                                     : "text-black"
-                                }`}
+                                  }`}
                               >
                                 <FaPlay
                                   fill="#046fbb"
-                                  className={`mr-2 ${
-                                    visibleProductIndex === productIndex
+                                  className={`mr-2 ${visibleProductIndex === productIndex
                                       ? "rotate-90"
                                       : "rotate-0"
-                                  } transition-all duration-200`}
+                                    } transition-all duration-200`}
                                 />
                                 {product.vname}
                               </span>
@@ -544,21 +547,19 @@ const RajelRajol = () => {
                                   className="w-full sm:w-[calc(50%-1.5rem)] md:w-[calc(33.33%-1.5rem)]"
                                 >
                                   <div
-                                    className={`flex items-center justify-start cursor-pointer ${
-                                      visibleProductIndex === productIndex
+                                    className={`flex items-center justify-start cursor-pointer ${visibleProductIndex === productIndex
                                         ? "font-bold"
                                         : ""
-                                    }`}
+                                      }`}
                                     onClick={() =>
                                       toggleProductDescription(productIndex)
                                     }
                                   >
                                     <span
-                                      className={`flex items-center font-bold ${
-                                        visibleProductIndex === productIndex
+                                      className={`flex items-center font-bold ${visibleProductIndex === productIndex
                                           ? "text-[#046fbb]"
                                           : "text-black"
-                                      }`}
+                                        }`}
                                     >
                                       <FaPlay fill="#046fbb" className="mr-2" />
                                       {product.vname}
@@ -636,29 +637,26 @@ const RajelRajol = () => {
                                   className="w-full sm:w-[calc(50%-1.5rem)] md:w-[calc(33.33%-1.5rem)]"
                                 >
                                   <div
-                                    className={`flex items-center justify-start cursor-pointer ${
-                                      visibleProductIndex === productIndex
+                                    className={`flex items-center justify-start cursor-pointer ${visibleProductIndex === productIndex
                                         ? "font-bold"
                                         : ""
-                                    }`}
+                                      }`}
                                     onClick={() =>
                                       toggleProductDescription(productIndex)
                                     }
                                   >
                                     <span
-                                      className={`flex items-center poppins-semibold ${
-                                        visibleProductIndex === productIndex
+                                      className={`flex items-center poppins-semibold ${visibleProductIndex === productIndex
                                           ? "text-[#046fbb]"
                                           : "text-black"
-                                      }`}
+                                        }`}
                                     >
                                       <FaPlay
                                         fill="#046fbb"
-                                        className={`mr-2 ${
-                                          visibleProductIndex === productIndex
+                                        className={`mr-2 ${visibleProductIndex === productIndex
                                             ? "rotate-90"
                                             : "rotate-0"
-                                        } transition-all duration-200`}
+                                          } transition-all duration-200`}
                                       />
                                       {product.vname}
                                     </span>
@@ -718,19 +716,17 @@ const RajelRajol = () => {
                     className="bg-white rounded-md w-full shadow-lg overflow-hidden p-4"
                   >
                     <div
-                      className={`flex items-center justify-start font-normal  cursor-pointer ${
-                        visibleApplicationIndex === productIndex
+                      className={`flex items-center justify-start font-normal  cursor-pointer ${visibleApplicationIndex === productIndex
                           ? "font-bold"
                           : ""
-                      }`}
+                        }`}
                       onClick={() => toggleApplicationDescription(productIndex)}
                     >
                       <span
-                        className={`flex items-center justify-between w-full  poppins-semibold ${
-                          visibleApplicationIndex === productIndex
+                        className={`flex items-center justify-between w-full  poppins-semibold ${visibleApplicationIndex === productIndex
                             ? "text-[#046fbb]"
                             : "text-black"
-                        }`}
+                          }`}
                       >
                         {/* <FaPlay
                                                     fill="#046fbb"

@@ -4,6 +4,10 @@ export const RajelRajolData = [
     name: "Rajol",
     bannerImage: "/Brands/banner_rajol.png",
     mainLogo: "/Rajol.png",
+    helmet : {
+      helmetTitle : `Rajol | Cutting-edge Process Oils by Raj Petro`,
+      description : `Uncover Rajol’s versatile process oils, designed to meet the demands of the rubber, tire, and plastics industries globally.`
+    },
     brochureLinks: ["/brochures/Rajol Brochure V1-compressed.pdf"],
     description: `
         <p>
@@ -150,6 +154,10 @@ WP PO
     name: "Rajell",
     bannerImage: "/Brands/banner_rajell.png",
     mainLogo: "/rajell.png",
+     helmet : {
+      helmetTitle : `Rajell | High-Performance Industrial Lubricants by Raj Petro`,
+      description : `Discover Rajell’s range of superior industrial lubricants built to enhance machine life and performance across multiple manufacturing sectors.`
+    },
     description: `
 <p>
   Petroleum Jellies are high purity homogeneous mixtures of long chain oil & waxy hydrocarbons.
@@ -166,7 +174,7 @@ WP PO
 </ul>
 <br />
 <p>
-  Rajell - Petroleum Jellies conform to the most recent requirements of Pharmacopoeia
+  RAJELL - Petroleum Jellies conform to the most recent requirements of Pharmacopoeia
   (USP, BP, Ph.Eur., IP, JP) and US FDA monographs. Custom-made Petroleum Jellies catering to
   specific applications can be formulated on request.
 </p>
@@ -245,7 +253,7 @@ WP PO
       },
     ],
 
-    ApplicationDescription: `The excellent characteristic of Rajell - Petroleum Jellies along with their high quality and harmless content guarantees safety and inertness, finds wide applications in a variety of industries. `,
+    ApplicationDescription: `The excellent characteristic of RAJELL - Petroleum Jellies along with their high quality and harmless content guarantees safety and inertness, finds wide applications in a variety of industries. `,
     Applications: [
       {
         vname: "PERSONAL CARE & BEAUTY CARE:",
